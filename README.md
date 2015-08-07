@@ -1,5 +1,4 @@
 # uxcore-select
----
 
 - tags: uxcore, select
 - description: uxcore select
@@ -7,6 +6,8 @@
 - version: 0.1.0
 - lastupdate: 2015/7/12
 - screenshots:
+
+---
 
 ## TL;DR
 
@@ -31,9 +32,10 @@ $ npm run deploy
 ## Usage
 
 ```js
-var Pagination = require('select');
-React.render(
-|<Pagination onChange={onChange} total={50} />, document.getElementById('target'));
+var Select = require('select');
+<Select>
+  <Option value="lucy">lucy</Option>
+</Select>
 ```
 
 ### demo
