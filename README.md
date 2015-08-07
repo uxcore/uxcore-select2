@@ -32,7 +32,7 @@ $ npm run deploy
 ## Usage
 
 ```js
-var Select = require('select');
+var Select = require('uxcore-select2');
 <Select>
   <Option value="lucy">lucy</Option>
 </Select>
