@@ -2,6 +2,10 @@
 
 ---
 
+## 0.1.4
+
+`FIXED` fix for ie8 bug which is defalutProps cannot be inherited by extends method.
+
 ## 0.1.3
 
 `FIXED` fix dependencies bug

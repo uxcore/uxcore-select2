@@ -3,7 +3,7 @@
 - tags: uxcore, select
 - description: uxcore select
 - maintainers: vincent.bian
-- version: 0.1.3
+- version: 0.1.4
 - lastupdate: 2015/9/1
 - screenshots:
 
