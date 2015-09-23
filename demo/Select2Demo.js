@@ -18,7 +18,8 @@ class Demo extends React.Component {
             value1: "",
             value2: "",
             value3: "",
-            value4: ""
+            value4: "",
+            options: []
         };
     }
 
@@ -33,6 +34,21 @@ class Demo extends React.Component {
         let me = this;
         me.setState({
             value2: value
+        });
+    }
+
+    handleChange3(value) {
+        var options;
+        if (!value || value.indexOf('@') >= 0) {
+            options = [];
+        } else {
+            options = ['gmail.com', '163.com', 'qq.com'].map(function(domain) {
+                var email = value + '@' + domain;
+                return <Option key={email}>{email}</Option>;
+            });
+        }
+        this.setState({
+            options: options
         });
     }
 
@@ -65,6 +81,13 @@ class Demo extends React.Component {
                     style={{width:400}}
                     tags={true}>
                     {tagChildren}
+                </Select>
+                <p>Combo 模式</p>
+                <Select combobox
+                  style={{width:200}}
+                  onChange={this.handleChange3.bind(this)}
+                  searchPlaceholder="请输入账户名">
+                  {this.state.options}
                 </Select>
             </div>
         )
