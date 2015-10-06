@@ -1,23 +1,16 @@
-# uxcore-select
-
-- tags: uxcore, select
-- description: uxcore select
-- maintainers: vincent.bian
-- version: 0.1.4
-- lastupdate: 2015/9/1
-- screenshots:
-
 ---
+
+## uxcore-select2 [![Dependency Status](http://img.shields.io/david/uxcore/uxcore-select2.svg?style=flat-square)](https://david-dm.org/uxcore/uxcore-select2) [![devDependency Status](http://img.shields.io/david/dev/uxcore/uxcore-select2.svg?style=flat-square)](https://david-dm.org/uxcore/uxcore-select2#info=devDependencies) 
 
 ## TL;DR
 
-uxcore-form ui component for react
+uxcore-select2 ui component for react
 
 #### setup develop environment
 
 ```sh
-$ git clone https://github.com/uxcore/uxcore-form
-$ cd uxcore-form
+$ git clone https://github.com/uxcore/uxcore-select2
+$ cd uxcore-select2
 $ npm install
 $ gulp server
 ```
