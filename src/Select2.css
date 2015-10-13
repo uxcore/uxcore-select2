@@ -5,26 +5,18 @@
  * Copyright 2014-2015, Uxcore Team, Alinw.
  * All rights reserved.
  */
-/*@pager-bg:                             @pagination-bg;
-@pager-border:                         @pagination-border;
-@pager-border-radius:                  15px;
-
-@pager-hover-bg:                       @pagination-hover-bg;
-
-@pager-active-bg:                      @pagination-active-bg;
-@pager-active-color:                   @pagination-active-color;*/
 .kuma-select {
   box-sizing: border-box;
   display: inline-block;
   margin: 0;
   position: relative;
   vertical-align: middle;
-  color: #666;
+  color: #666666;
   font-size: 14px;
 }
 .kuma-select > ul > li > a {
   padding: 0;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 .kuma-select-arrow {
   position: absolute;
@@ -45,20 +37,20 @@
   user-select: none;
   box-sizing: border-box;
   display: block;
-  background-color: #fff;
-  border: 1px solid #d9d9d9;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
 }
 .kuma-select-selection:hover {
-  border-color: #288df0;
+  border-color: #ff9900;
 }
 .kuma-select-disabled {
-  color: #ccc;
+  color: #cccccc;
   cursor: not-allowed;
   pointer-events: none;
 }
 .kuma-select-disabled .kuma-select-selection:hover,
 .kuma-select-disabled .kuma-select-selection:active {
-  border-color: #d9d9d9;
+  border-color: #cccccc;
 }
 .kuma-select .kuma-select-selection__rendered {
   margin: 0;
@@ -83,7 +75,7 @@
   font-weight: bold;
 }
 .kuma-select-selection--single .kuma-select-selection__placeholder {
-  color: #ccc;
+  color: #cccccc;
 }
 .kuma-select-lg .kuma-select-selection--single {
   height: 32px;
@@ -123,11 +115,11 @@
   top: -4px;
 }
 .kuma-select-disabled .kuma-select-selection__choice__remove {
-  color: #ccc;
+  color: #cccccc;
   cursor: default;
 }
 .kuma-select-disabled .kuma-select-selection__choice__remove:hover {
-  color: #ccc;
+  color: #cccccc;
 }
 .kuma-select-search__field__wrap {
   display: inline-block;
@@ -137,7 +129,7 @@
   position: absolute;
   top: 0;
   left: 3px;
-  color: #aaa;
+  color: #cccccc;
 }
 .kuma-select-search--inline {
   float: left;
@@ -222,7 +214,7 @@
   content: '\e613';
 }
 .kuma-select-open .kuma-select-selection {
-  border-color: #288df0;
+  border-color: #ff9900;
 }
 .kuma-select-combobox .kuma-select-arrow {
   display: none;
@@ -252,7 +244,7 @@
 }
 .kuma-select-dropdown {
   background-color: white;
-  border: 1px solid #d9d9d9;
+  border: 1px solid #cccccc;
   box-sizing: border-box;
   z-index: 1070;
   left: -9999px;
@@ -301,12 +293,12 @@
   background-color: #eee;
 }
 .kuma-select-dropdown-menu-item-disabled {
-  color: #ccc;
+  color: #cccccc;
   cursor: not-allowed;
   pointer-events: none;
 }
 .kuma-select-dropdown-menu-item-disabled:hover {
-  color: #ccc;
+  color: #cccccc;
   background-color: #fff;
   cursor: not-allowed;
 }
@@ -336,7 +328,7 @@
   padding: 4px 7px;
   width: 100%;
   box-sizing: border-box;
-  border: 1px solid #d9d9d9;
+  border: 1px solid #cccccc;
   outline: none;
 }
 .kuma-select-dropdown .kuma-select-search--dropdown.kuma-select-search--hide {

@@ -2,8 +2,11 @@
 
 ---
 
+## 0.1.6
+`CHANGED` upgrade to react@0.14
+
 ## 0.1.5
-`CHANGED` update rc-select to 4.9.0 
+`CHANGED` update rc-select to 4.9.0
 
 ## 0.1.4
 
