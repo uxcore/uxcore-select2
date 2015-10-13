@@ -1,37 +1,23 @@
-# uxcore-select
-
-- tags: uxcore, select
-- description: uxcore select
-- maintainers: vincent.bian
-- version: 0.1.4
-- lastupdate: 2015/9/1
-- screenshots:
-
 ---
 
+## uxcore-select2 [![Dependency Status](http://img.shields.io/david/uxcore/uxcore-select2.svg?style=flat-square)](https://david-dm.org/uxcore/uxcore-select2) [![devDependency Status](http://img.shields.io/david/dev/uxcore/uxcore-select2.svg?style=flat-square)](https://david-dm.org/uxcore/uxcore-select2#info=devDependencies) 
+
 ## TL;DR
+
+uxcore-select2 ui component for react
 
 #### setup develop environment
 
 ```sh
-$ git clone https://github.com/uxcore/select
-$ cd select
+$ git clone https://github.com/uxcore/uxcore-select2
+$ cd uxcore-select2
 $ npm install
-$ npm run dev
-```
-nav http://localhost:9090/webpack-dev-server/example/ to see the demo
-
-#### deploy to gh-pages
-[refer to]( http://stackoverflow.com/questions/17643381/how-to-upload-my-angularjs-static-site-to-github-pages)
-```sh
-$ npm run build
-$ git add build & git commit -m 'update deploy files'
-$ npm run deploy
+$ gulp server
 ```
 
 ## Usage
 
-```js
+```javascript
 var Select = require('uxcore-select2');
 <Select>
   <Option value="lucy">lucy</Option>
@@ -41,7 +27,7 @@ var Select = require('uxcore-select2');
 ### demo
 http://uxcore.github.io/select/
 
-## API
+## Props
 
 ### Select props
 
@@ -61,6 +47,7 @@ http://uxcore.github.io/select/
 |optionFilterProp | 输入项过滤对应的 option 属性 | string | value |
 |combobox | 输入框自动提示模式 |  | false |
 |size | 选择框大小 | String | 无 |
+|optionLabelProp| 选择 Option 的哪个 prop 作为选择框中的显示。| string | 'children' |
 
 ### Option props
 |参数|说明|类型|默认值|
