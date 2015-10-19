@@ -5,7 +5,7 @@
  * Copyright 2014-2015, Uxcore Team, Alinw.
  * All rights reserved.
  */
-.kuma-select {
+.kuma-select2 {
   box-sizing: border-box;
   display: inline-block;
   margin: 0;
@@ -14,11 +14,11 @@
   color: #666666;
   font-size: 14px;
 }
-.kuma-select > ul > li > a {
+.kuma-select2 > ul > li > a {
   padding: 0;
   background-color: #ffffff;
 }
-.kuma-select-arrow {
+.kuma-select2-arrow {
   position: absolute;
   top: 50%;
   right: 8px;
@@ -26,13 +26,13 @@
   margin-top: -7px;
   font-family: 'kuma';
 }
-.kuma-select-arrow * {
+.kuma-select2-arrow * {
   display: none;
 }
-.kuma-select-arrow:before {
+.kuma-select2-arrow:before {
   content: '\e614';
 }
-.kuma-select-selection {
+.kuma-select2-selection {
   outline: none;
   user-select: none;
   box-sizing: border-box;
@@ -40,27 +40,27 @@
   background-color: #ffffff;
   border: 1px solid #cccccc;
 }
-.kuma-select-selection:hover {
+.kuma-select2-selection:hover {
   border-color: #ff9900;
 }
-.kuma-select-disabled {
+.kuma-select2-disabled {
   color: #cccccc;
   cursor: not-allowed;
   pointer-events: none;
 }
-.kuma-select-disabled .kuma-select-selection:hover,
-.kuma-select-disabled .kuma-select-selection:active {
+.kuma-select2-disabled .kuma-select2-selection:hover,
+.kuma-select2-disabled .kuma-select2-selection:active {
   border-color: #cccccc;
 }
-.kuma-select .kuma-select-selection__rendered {
+.kuma-select2 .kuma-select2-selection__rendered {
   margin: 0;
   list-style: none;
 }
-.kuma-select-selection--single {
+.kuma-select2-selection--single {
   height: 28px;
   cursor: pointer;
 }
-.kuma-select-selection--single .kuma-select-selection__rendered {
+.kuma-select2-selection--single .kuma-select2-selection__rendered {
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -69,116 +69,116 @@
   padding-right: 20px;
   line-height: 26px;
 }
-.kuma-select-selection--single .kuma-select-selection__clear {
+.kuma-select2-selection--single .kuma-select2-selection__clear {
   cursor: pointer;
   float: right;
   font-weight: bold;
 }
-.kuma-select-selection--single .kuma-select-selection__placeholder {
+.kuma-select2-selection--single .kuma-select2-selection__placeholder {
   color: #cccccc;
 }
-.kuma-select-lg .kuma-select-selection--single {
+.kuma-select2-lg .kuma-select2-selection--single {
   height: 32px;
 }
-.kuma-select-lg .kuma-select-selection--single .kuma-select-selection__rendered {
+.kuma-select2-lg .kuma-select2-selection--single .kuma-select2-selection__rendered {
   line-height: 30px;
 }
-.kuma-select-lg .kuma-select-selection--multiple {
+.kuma-select2-lg .kuma-select2-selection--multiple {
   min-height: 32px;
 }
-.kuma-select-lg .kuma-select-selection--multiple .kuma-select-selection__rendered li {
+.kuma-select2-lg .kuma-select2-selection--multiple .kuma-select2-selection__rendered li {
   height: 24px;
 }
-.kuma-select-lg .kuma-select-selection--multiple .kuma-select-selection__rendered li .kuma-select-selection__choice__content {
+.kuma-select2-lg .kuma-select2-selection--multiple .kuma-select2-selection__rendered li .kuma-select2-selection__choice__content {
   font-size: 14px;
   line-height: 24px;
 }
-.kuma-select-sm .kuma-select-selection--single {
+.kuma-select2-sm .kuma-select2-selection--single {
   height: 22px;
 }
-.kuma-select-sm .kuma-select-selection--single .kuma-select-selection__rendered {
+.kuma-select2-sm .kuma-select2-selection--single .kuma-select2-selection__rendered {
   line-height: 20px;
 }
-.kuma-select-sm .kuma-select-selection--multiple {
+.kuma-select2-sm .kuma-select2-selection--multiple {
   min-height: 22px;
 }
-.kuma-select-sm .kuma-select-selection--multiple .kuma-select-selection__rendered li {
+.kuma-select2-sm .kuma-select2-selection--multiple .kuma-select2-selection__rendered li {
   height: 14px;
 }
-.kuma-select-sm .kuma-select-selection--multiple .kuma-select-selection__rendered li .kuma-select-selection__choice__content {
+.kuma-select2-sm .kuma-select2-selection--multiple .kuma-select2-selection__rendered li .kuma-select2-selection__choice__content {
   line-height: 14px;
   position: relative;
   top: -3px;
 }
-.kuma-select-sm .kuma-select-selection--multiple .kuma-select-selection__rendered li .kuma-select-selection__choice__remove {
+.kuma-select2-sm .kuma-select2-selection--multiple .kuma-select2-selection__rendered li .kuma-select2-selection__choice__remove {
   position: relative;
   top: -4px;
 }
-.kuma-select-disabled .kuma-select-selection__choice__remove {
+.kuma-select2-disabled .kuma-select2-selection__choice__remove {
   color: #cccccc;
   cursor: default;
 }
-.kuma-select-disabled .kuma-select-selection__choice__remove:hover {
+.kuma-select2-disabled .kuma-select2-selection__choice__remove:hover {
   color: #cccccc;
 }
-.kuma-select-search__field__wrap {
+.kuma-select2-search__field__wrap {
   display: inline-block;
   position: relative;
 }
-.kuma-select-search__field__placeholder {
+.kuma-select2-search__field__placeholder {
   position: absolute;
   top: 0;
   left: 3px;
   color: #cccccc;
 }
-.kuma-select-search--inline {
+.kuma-select2-search--inline {
   float: left;
 }
-.kuma-select-search--inline .kuma-select-search__field__wrap {
+.kuma-select2-search--inline .kuma-select2-search__field__wrap {
   width: 100%;
 }
-.kuma-select-search--inline .kuma-select-search__field {
+.kuma-select2-search--inline .kuma-select2-search__field {
   border: none;
   font-size: 100%;
   background: transparent;
   outline: 0;
 }
-.kuma-select-search--inline > i {
+.kuma-select2-search--inline > i {
   float: right;
 }
-.kuma-select-selection--multiple {
+.kuma-select2-selection--multiple {
   min-height: 28px;
   cursor: text;
 }
-.kuma-select-selection--multiple .kuma-select-search__field__placeholder {
+.kuma-select2-selection--multiple .kuma-select2-search__field__placeholder {
   top: 6px;
   left: 10px;
 }
-.kuma-select-selection--multiple .kuma-select-search--inline {
+.kuma-select2-selection--multiple .kuma-select2-search--inline {
   width: auto;
 }
-.kuma-select-selection--multiple .kuma-select-search--inline .kuma-select-search__field {
+.kuma-select2-selection--multiple .kuma-select2-search--inline .kuma-select2-search__field {
   width: 0.75em;
 }
-.kuma-select-selection--multiple .kuma-select-selection__rendered {
+.kuma-select2-selection--multiple .kuma-select2-selection__rendered {
   overflow: hidden;
   text-overflow: ellipsis;
   padding-left: 6px;
   padding-bottom: 4px;
 }
-.kuma-select-selection--multiple .kuma-select-selection__clear {
+.kuma-select2-selection--multiple .kuma-select2-selection__clear {
   cursor: pointer;
   float: right;
   font-weight: bold;
   margin-top: 5px;
   margin-right: 10px;
 }
-.kuma-select-selection--multiple > ul > li {
+.kuma-select2-selection--multiple > ul > li {
   margin-top: 4px;
   height: 20px;
   line-height: 20px;
 }
-.kuma-select-selection--multiple .kuma-select-selection__choice {
+.kuma-select2-selection--multiple .kuma-select2-selection__choice {
   background-color: #f3f3f3;
   cursor: default;
   float: left;
@@ -187,14 +187,14 @@
   max-width: 99%;
   position: relative;
 }
-.kuma-select-selection--multiple .kuma-select-selection__choice__content {
+.kuma-select2-selection--multiple .kuma-select2-selection__choice__content {
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
 }
-.kuma-select-selection--multiple .kuma-select-selection__choice__remove {
+.kuma-select2-selection--multiple .kuma-select2-selection__choice__remove {
   color: #919191;
   cursor: pointer;
   display: inline-block;
@@ -203,46 +203,46 @@
   position: absolute;
   right: 4px;
 }
-.kuma-select-selection--multiple .kuma-select-selection__choice__remove:hover {
+.kuma-select2-selection--multiple .kuma-select2-selection__choice__remove:hover {
   color: #333;
 }
-.kuma-select-selection--multiple .kuma-select-selection__choice__remove:before {
+.kuma-select2-selection--multiple .kuma-select2-selection__choice__remove:before {
   font-family: 'kuma';
   content: '\e610';
 }
-.kuma-select-open .kuma-select-arrow:before {
+.kuma-select2-open .kuma-select2-arrow:before {
   content: '\e613';
 }
-.kuma-select-open .kuma-select-selection {
+.kuma-select2-open .kuma-select2-selection {
   border-color: #ff9900;
 }
-.kuma-select-combobox .kuma-select-arrow {
+.kuma-select2-combobox .kuma-select2-arrow {
   display: none;
 }
-.kuma-select-combobox .kuma-select-search--inline {
+.kuma-select2-combobox .kuma-select2-search--inline {
   height: 100%;
   float: none;
 }
-.kuma-select-combobox .kuma-select-search__field__placeholder {
+.kuma-select2-combobox .kuma-select2-search__field__placeholder {
   left: 10px;
   cursor: text;
 }
-.kuma-select-combobox .kuma-select-search__field__wrap {
+.kuma-select2-combobox .kuma-select2-search__field__wrap {
   width: 100%;
   height: 100%;
 }
-.kuma-select-combobox .kuma-select-search__field {
+.kuma-select2-combobox .kuma-select2-search__field {
   padding: 0 10px;
   width: 100%;
   height: 100%;
   position: relative;
   z-index: 1;
 }
-.kuma-select-combobox .kuma-select-selection__rendered {
+.kuma-select2-combobox .kuma-select2-selection__rendered {
   padding: 0;
   height: 100%;
 }
-.kuma-select-dropdown {
+.kuma-select2-dropdown {
   background-color: white;
   border: 1px solid #cccccc;
   box-sizing: border-box;
@@ -254,10 +254,10 @@
   overflow: hidden;
   font-size: 12px;
 }
-.kuma-select-dropdown-hidden {
+.kuma-select2-dropdown-hidden {
   display: none;
 }
-.kuma-select-dropdown-menu {
+.kuma-select2-dropdown-menu {
   outline: none;
   margin-bottom: 0;
   padding-left: 0;
@@ -265,19 +265,19 @@
   max-height: 250px;
   overflow: auto;
 }
-.kuma-select-dropdown-menu-item-group-list {
+.kuma-select2-dropdown-menu-item-group-list {
   margin: 0;
   padding: 0;
 }
-.kuma-select-dropdown-menu-item-group-list > .kuma-select-dropdown-menu-item {
+.kuma-select2-dropdown-menu-item-group-list > .kuma-select2-dropdown-menu-item {
   padding-left: 24px;
 }
-.kuma-select-dropdown-menu-item-group-title {
+.kuma-select2-dropdown-menu-item-group-title {
   color: #999;
   line-height: 1.5;
   padding: 8px 16px;
 }
-.kuma-select-dropdown-menu-item {
+.kuma-select2-dropdown-menu-item {
   position: relative;
   display: block;
   padding: 7px 33px 7px 16px;
@@ -288,50 +288,50 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.kuma-select-dropdown-menu-item:hover,
-.kuma-select-dropdown-menu-item-active {
+.kuma-select2-dropdown-menu-item:hover,
+.kuma-select2-dropdown-menu-item-active {
   background-color: #eee;
 }
-.kuma-select-dropdown-menu-item-disabled {
+.kuma-select2-dropdown-menu-item-disabled {
   color: #cccccc;
   cursor: not-allowed;
   pointer-events: none;
 }
-.kuma-select-dropdown-menu-item-disabled:hover {
+.kuma-select2-dropdown-menu-item-disabled:hover {
   color: #cccccc;
   background-color: #fff;
   cursor: not-allowed;
 }
-.kuma-select-dropdown-menu-item-divider {
+.kuma-select2-dropdown-menu-item-divider {
   height: 1px;
   margin: 1px 0;
   overflow: hidden;
   background-color: #e5e5e5;
   line-height: 0;
 }
-.kuma-select-dropdown-container-open .kuma-select-dropdown,
-.kuma-select-dropdown-open .kuma-select-dropdown {
+.kuma-select2-dropdown-container-open .kuma-select2-dropdown,
+.kuma-select2-dropdown-open .kuma-select2-dropdown {
   display: block;
 }
-.kuma-select-dropdown .kuma-select-search--dropdown {
+.kuma-select2-dropdown .kuma-select2-search--dropdown {
   display: block;
   padding: 4px;
 }
-.kuma-select-dropdown .kuma-select-search--dropdown .kuma-select-search__field__placeholder {
+.kuma-select2-dropdown .kuma-select2-search--dropdown .kuma-select2-search__field__placeholder {
   left: 7px;
   top: 5px;
 }
-.kuma-select-dropdown .kuma-select-search--dropdown .kuma-select-search__field__wrap {
+.kuma-select2-dropdown .kuma-select2-search--dropdown .kuma-select2-search__field__wrap {
   width: 100%;
 }
-.kuma-select-dropdown .kuma-select-search--dropdown .kuma-select-search__field {
+.kuma-select2-dropdown .kuma-select2-search--dropdown .kuma-select2-search__field {
   padding: 4px 7px;
   width: 100%;
   box-sizing: border-box;
   border: 1px solid #cccccc;
   outline: none;
 }
-.kuma-select-dropdown .kuma-select-search--dropdown.kuma-select-search--hide {
+.kuma-select2-dropdown .kuma-select2-search--dropdown.kuma-select2-search--hide {
   display: none;
 }
 
