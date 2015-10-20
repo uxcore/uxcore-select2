@@ -2,6 +2,10 @@
 
 ---
 
+## 0.1.9
+
+`FIXED` fix issue #6
+
 ## 0.1.7
 `CHANGED` change css prefix
 
