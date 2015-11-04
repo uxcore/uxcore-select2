@@ -16,7 +16,6 @@
 }
 
 .@{selectPrefixCls} {
-  box-sizing: border-box;
   display: inline-block;
   margin: 0;
   position: relative;
@@ -51,11 +50,11 @@
     outline: none;
     user-select: none;
 
-    box-sizing: border-box;
     display: block;
 
     background-color: @input-bg;
     border: 1px solid @input-border;
+    border-radius: @input-radius;
     &:hover {
         border-color: @brand-primary;
     }
