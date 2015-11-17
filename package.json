@@ -36,8 +36,8 @@
     "jsonp": "^0.2.0",
     "react": "~0.14.0",
     "react-dom": "~0.14.0",
-    "webpack": "^1.10.5",
-    "uxcore-kuma": "^1.1.0"
+    "uxcore-kuma": "^1.1.0",
+    "webpack": "^1.12.6"
   },
   "dependencies": {
     "classnames": "^2.1.2",
