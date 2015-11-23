@@ -1,11 +1,3 @@
-/**
- * Select2 Component Style for uxcore
- * @author
- *
- * Copyright 2014-2015, Uxcore Team, Alinw.
- * All rights reserved.
- */
-
 @selectPrefixCls: kuma-select2;
 
 //mixin
@@ -23,6 +15,12 @@
   color: @black;
   font-size: @font-size-base;
 
+  ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
   > ul > li > a {
     padding: 0;
     background-color: @input-bg;
@@ -35,8 +33,7 @@
     right: 8px;
     line-height: 1;
     margin-top: -7px;
-    font-family: @arrow-font-family;
-    color: #999;
+    font-family: 'kuma';
 
     * {
       display: none;
@@ -50,14 +47,16 @@
   &-selection {
     outline: none;
     user-select: none;
-
+    -webkit-user-select: none;
     display: block;
-
     background-color: @input-bg;
-    border: 1px solid @input-border;
     border-radius: @input-radius;
+    border: 1px solid @input-border;
     &:hover {
-        border-color: @brand-primary;
+      border-color: @brand-primary;
+    }
+    &:active {
+      border-color: @brand-primary;
     }
   }
 
@@ -73,11 +72,6 @@
     }
   }
 
-  .@{selectPrefixCls}-selection__rendered {
-    margin: 0;
-    list-style: none;
-  }
-
   &-selection--single {
     height: 28px;
     cursor: pointer;
@@ -86,10 +80,9 @@
       display: block;
       overflow: hidden;
       text-overflow: ellipsis;
-      white-space: nowrap;
       padding-left: 10px;
       padding-right: 20px;
-      line-height: 26px;
+      line-height: 28px;
     }
 
     .@{selectPrefixCls}-selection__clear {
@@ -98,54 +91,6 @@
 
     .@{selectPrefixCls}-selection__placeholder {
       color: @input-color-placeholder;
-    }
-  }
-
-  &-lg {
-    .@{selectPrefixCls}-selection--single {
-      height: 32px;
-      .@{selectPrefixCls}-selection__rendered {
-        line-height: 30px;
-      }
-    }
-
-    .@{selectPrefixCls}-selection--multiple {
-      min-height: 32px;
-      .@{selectPrefixCls}-selection__rendered {
-        li {
-          height: 24px;
-          .@{selectPrefixCls}-selection__choice__content {
-            font-size: 14px;
-            line-height: 24px;
-          }
-        }
-      }
-    }
-  }
-
-  &-sm {
-    .@{selectPrefixCls}-selection--single {
-      height: 22px;
-      .@{selectPrefixCls}-selection__rendered {
-        line-height: 20px;
-      }
-    }
-    .@{selectPrefixCls}-selection--multiple {
-      min-height: 22px;
-      .@{selectPrefixCls}-selection__rendered {
-        li {
-          height: 14px;
-          .@{selectPrefixCls}-selection__choice__content {
-            line-height: 14px;
-            position: relative;
-            top: -3px;
-          }
-          .@{selectPrefixCls}-selection__choice__remove {
-            position: relative;
-            top: -4px;
-          }
-        }
-      }
     }
   }
 
@@ -171,16 +116,17 @@
 
   &-search--inline {
     float: left;
-
+    width: 100%;
     .@{selectPrefixCls}-search__field__wrap {
       width: 100%;
     }
-
     .@{selectPrefixCls}-search__field {
       border: none;
       font-size: 100%;
+      //margin-top: 5px;
       background: transparent;
       outline: 0;
+      width: 100%;
     }
     > i {
       float: right;
@@ -191,11 +137,6 @@
     min-height: 28px;
     cursor: text;
 
-    .@{selectPrefixCls}-search__field__placeholder {
-      top: 6px;
-      left: 10px;
-    }
-
     .@{selectPrefixCls}-search--inline {
       width: auto;
       .@{selectPrefixCls}-search__field {
@@ -203,11 +144,16 @@
       }
     }
 
+    .@{selectPrefixCls}-search__field__placeholder {
+      top: 6px;
+      left: 10px;
+    }
+
     .@{selectPrefixCls}-selection__rendered {
       overflow: hidden;
       text-overflow: ellipsis;
       padding-left: 6px;
-      padding-bottom: 4px;
+      // padding-bottom: 4px;
     }
 
     .@{selectPrefixCls}-selection__clear {
@@ -232,21 +178,12 @@
       position: relative;
     }
 
-    .@{selectPrefixCls}-selection__choice__content {
-      display: inline-block;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 100%;
-    }
-
     .@{selectPrefixCls}-selection__choice__remove {
       color: #919191;
       cursor: pointer;
       display: inline-block;
       font-weight: bold;
       padding: 0 0 0 4px;
-      position: absolute;
       right: 4px;
       &:hover {
         color: #333;
@@ -256,6 +193,111 @@
         font-family: 'kuma';
         content: '\e610';
       }
+    }
+  }
+
+  &-dropdown {
+    background-color: white;
+    border: 1px solid @input-border;
+    box-sizing: border-box;
+    z-index: 1070;
+    left: -9999px;
+    top: -9999px;
+    position: absolute;
+    outline: none;
+    overflow: hidden;
+    font-size: 12px;
+
+    &-hidden {
+      display: none;
+    }
+
+    &-menu {
+      outline: none;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      z-index: 9999;
+      max-height: 250px;
+      overflow: auto;
+
+      &-item-group-list {
+        margin: 0;
+        padding: 0;
+
+        > li.@{selectPrefixCls}-dropdown-menu-item {
+          padding-left: 24px;
+        }
+      }
+
+      &-item-group-title {
+        color: #999;
+        line-height: 1.5;
+        padding: 8px 16px;
+      }
+
+      &-item {
+        position: relative;
+        display: block;
+        padding: 7px 33px 7px 16px;
+        font-weight: normal;
+        color: #666;
+        white-space: nowrap;
+        cursor: pointer;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &:hover, &-active {
+          background-color: #eee;
+        }
+
+        &-selected {
+          background-color: #f5f5f5;
+        }
+
+        &-disabled {
+          color: #ccc;
+          cursor: not-allowed;
+          pointer-events: none;
+
+          &:hover {
+            color: #ccc;
+            background-color: #fff;
+            cursor: not-allowed;
+          }
+        }
+
+        &-divider {
+          height: 1px;
+          margin: 1px 0;
+          overflow: hidden;
+          background-color: #e5e5e5;
+          line-height: 0;
+        }
+      }
+    }
+
+  }
+
+  &-dropdown-search {
+    display: block;
+    padding: 4px;
+    .@{selectPrefixCls}-search__field__wrap {
+      width: 100%;
+    }
+    .@{selectPrefixCls}-search__field__placeholder {
+      top: 4px;
+    }
+    .@{selectPrefixCls}-search__field {
+      padding: 4px;
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid #d9d9d9;
+      border-radius: @input-radius;
+      outline: none;
+    }
+    &.@{selectPrefixCls}-search--hide {
+      display: none;
     }
   }
 
@@ -269,145 +311,4 @@
         border-color: @brand-primary;
     }
   }
-
-  &-combobox {
-    .@{selectPrefixCls}-arrow {
-      display: none;
-    }
-    .@{selectPrefixCls}-search--inline {
-      height: 100%;
-      float: none;
-    }
-    .@{selectPrefixCls}-search__field__placeholder {
-      left: 10px;
-      cursor: text;
-    }
-    .@{selectPrefixCls}-search__field__wrap {
-      width: 100%;
-      height: 100%;
-    }
-    .@{selectPrefixCls}-search__field {
-      padding: 0 10px;
-      width: 100%;
-      height: 100%;
-      position: relative;
-      z-index: 1;
-    }
-    .@{selectPrefixCls}-selection__rendered {
-      padding: 0;
-      height: 100%;
-    }
-  }
 }
-
-.@{selectPrefixCls}-dropdown {
-
-  &-hidden {
-    display: none;
-  }
-
-  background-color: white;
-  border: 1px solid @input-border;
-  box-sizing: border-box;
-  z-index: 1070;
-  left: -9999px;
-  top: -9999px;
-  position: absolute;
-  outline: none;
-  overflow: hidden;
-  font-size: 12px;
-
-  &-menu {
-    outline: none;
-    margin-bottom: 0;
-    padding-left: 0; // Override default ul/ol
-    list-style: none;
-    max-height: 250px;
-    overflow: auto;
-
-    &-item-group-list {
-      margin: 0;
-      padding: 0;
-
-      > .@{selectPrefixCls}-dropdown-menu-item {
-        padding-left: 24px;
-      }
-    }
-
-    &-item-group-title {
-      color: #999;
-      line-height: 1.5;
-      padding: 8px 16px;
-    }
-
-    &-item {
-      position: relative;
-      display: block;
-      padding: 7px 33px 7px 16px;
-      font-weight: normal;
-      color: #666;
-      white-space: nowrap;
-      cursor: pointer;
-      overflow: hidden;
-      text-overflow: ellipsis;
-
-      &:hover, &-active {
-        background-color: #eee;
-      }
-
-      &-disabled {
-        color: @gray-dark;
-        cursor: @cursor-disabled;
-        pointer-events: none;
-
-        &:hover {
-          color: @gray-dark;
-          background-color: #fff;
-          cursor: @cursor-disabled;
-        }
-
-      }
-
-      &-selected {
-          background-color: #f5f5f5;
-      }
-
-      &-divider {
-        height: 1px;
-        margin: 1px 0;
-        overflow: hidden;
-        background-color: #e5e5e5;
-        line-height: 0;
-      }
-    }
-  }
-
-  &-container-open, &-open {
-    .@{selectPrefixCls}-dropdown {
-      display: block;
-    }
-  }
-
-  .@{selectPrefixCls}-search--dropdown {
-    display: block;
-    padding: 4px;
-    .@{selectPrefixCls}-search__field__placeholder {
-      left: 7px;
-      top: 5px;
-    }
-    .@{selectPrefixCls}-search__field__wrap {
-      width: 100%;
-    }
-    .@{selectPrefixCls}-search__field {
-      padding: 4px 7px;
-      width: 100%;
-      box-sizing: border-box;
-      border: 1px solid @input-border;
-      outline: none;
-    }
-    &.@{selectPrefixCls}-search--hide {
-      display: none;
-    }
-  }
-}
-
