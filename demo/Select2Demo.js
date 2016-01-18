@@ -99,7 +99,7 @@ class Demo extends React.Component {
         return (
             <div>
                 <p>基本使用:</p>
-                <Select defaultValue="lucy" style={{width:200}} onChange={me.handleChange.bind(me)}>
+                <Select defaultValue="lucy" style={{width:200}} onChange={me.handleChange.bind(me)} allowClear={true}>
                     <Option value="jack">Jack</Option>
                     <Option value="lucy">Lucy</Option>
                     <Option value="disabled" disabled>Disabled</Option>
@@ -124,7 +124,7 @@ class Demo extends React.Component {
                 <Select style={{width: '100%'}} searchPlaceholder="标签模式" tags onChange={me.handleChange.bind(me)}>
                     {tagChildren}
                 </Select>
-                <p>分组</p>
+                {/*<p>分组</p>
                 <Select defaultValue="lucy"
                     style={{width:200}}
                     showSearch={false}
@@ -136,7 +136,7 @@ class Demo extends React.Component {
                     <OptGroup label="Engineer">
                         <Option value="yiminghe">yiminghe</Option>
                     </OptGroup>
-                </Select>
+                </Select>*/}
                 <p>智能提示</p>
                 <Select combobox
                   style={{width:200}}

@@ -87,7 +87,14 @@
     }
 
     .@{selectPrefixCls}-selection__clear {
-      .selection__clear();
+      font-weight: bold;
+      position: absolute;
+      top: 1px;
+      right: 20px;
+
+      &:after {
+        content: '×'
+      }
     }
 
     .@{selectPrefixCls}-selection__placeholder {
