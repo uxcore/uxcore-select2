@@ -97,9 +97,12 @@ class Demo extends React.Component {
             return <Option key={d[1]}>{d[0]}</Option>;
         });
         return (
-            <div>
+            <div className="demo" >
+                <div id="container">
                 <p>基本使用:</p>
-                <Select defaultValue="lucy" style={{width:200}} onChange={me.handleChange.bind(me)} allowClear={true}>
+                <Select defaultValue="lucy" style={{width:200}} onChange={me.handleChange.bind(me)} allowClear={true} getPopupContainer={function() {
+                    return document.getElementById("container")
+                }}>
                     <Option value="jack">Jack</Option>
                     <Option value="lucy">Lucy</Option>
                     <Option value="disabled" disabled>Disabled</Option>
@@ -153,6 +156,7 @@ class Demo extends React.Component {
                 <Select value={this.state.secondCity} style={{width:150}} onChange={this.onSecondCityChange.bind(this)}>
                     {cityOptions}
                 </Select>
+                </div>
             </div>
         )
     }
