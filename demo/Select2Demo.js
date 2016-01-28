@@ -100,7 +100,7 @@ class Demo extends React.Component {
             <div className="demo" >
                 <div id="container">
                 <p>基本使用:</p>
-                <Select defaultValue="lucy" style={{width:200}} onChange={me.handleChange.bind(me)} allowClear={true} getPopupContainer={function() {
+                <Select disabled={true} defaultValue="lucy" style={{width:200}} onChange={me.handleChange.bind(me)} allowClear={true} getPopupContainer={function() {
                     return document.getElementById("container")
                 }}>
                     <Option value="jack">Jack</Option>
