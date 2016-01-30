@@ -2,6 +2,10 @@
 
 ---
 
+## 0.1.11
+
+`CHANGED` update rc-select to 5.4.0
+
 ## 0.1.9
 
 `FIXED` fix issue #6
