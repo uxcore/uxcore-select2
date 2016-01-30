@@ -48,6 +48,7 @@ http://uxcore.github.io/select/
 |combobox | 输入框自动提示模式 |  | false |
 |size | 选择框大小 | String | 无 |
 |optionLabelProp| 选择 Option 的哪个 prop 作为选择框中的显示。| string | 'children' |
+|getPopupContainer| 弹出的菜单渲染在哪个容器中 | function(trigger:Node):Node | function(){return document.body;}|
 
 ### Option props
 |参数|说明|类型|默认值|

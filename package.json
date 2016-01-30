@@ -42,7 +42,7 @@
   "dependencies": {
     "classnames": "^2.1.2",
     "object-assign": "^2.0.0",
-    "rc-select": "~5.4.0"
+    "rc-select": "~5.7.0"
   },
   "author": "",
   "contributors": [],

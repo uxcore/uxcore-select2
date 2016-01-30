@@ -4,7 +4,7 @@
 
 ## 0.1.11
 
-`CHANGED` update rc-select to 5.4.0
+`CHANGED` update rc-select to 5.7.0
 
 ## 0.1.9
 
