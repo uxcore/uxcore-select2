@@ -2,6 +2,10 @@
 
 ---
 
+## 0.1.12
+
+`CHANGED` update scaffold
+
 ## 0.1.11
 
 `CHANGED` update rc-select to 5.7.0
