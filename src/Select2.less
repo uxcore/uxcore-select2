@@ -1,4 +1,4 @@
-@selectPrefixCls: kuma-select2;
+@__select-prefix-cls: kuma-select2;
 
 //mixin
 .selection__clear() {
@@ -7,12 +7,11 @@
   font-weight: bold;
 }
 
-.@{selectPrefixCls} {
+.@{__select-prefix-cls} {
   display: inline-block;
   margin: 0;
   position: relative;
   vertical-align: middle;
-  color: @black;
   font-size: 12px;
 
   ul, li {
@@ -23,7 +22,7 @@
 
   > ul > li > a {
     padding: 0;
-    background-color: @input-bg;
+    // background-color: @input-bg;
   }
 
   // arrow
@@ -31,7 +30,7 @@
     position: absolute;
     top: 0;
     right: 8px;
-    line-height: 28px;
+    line-height: 34px;
     font-family: @arrow-font-family;
     color: #999;
 
@@ -49,48 +48,47 @@
     user-select: none;
     -webkit-user-select: none;
     display: block;
-    background-color: @input-bg;
-    border-radius: @input-radius;
-    border: 1px solid @input-border;
+    border-radius: @input-border-radius;
+    border: 1px solid @border-color;
     &:hover {
-      border-color: @brand-primary;
+      border-color: @border-hover-color;
     }
     &:active {
-      border-color: @brand-primary;
+      border-color: @border-hover-color;
     }
   }
 
   &-disabled {
-    color: @gray-dark;
-    cursor: @cursor-disabled;
+    color: @text-disabled-color;
+    cursor: not-allowed;
     pointer-events: none;
   }
 
-  &-disabled .@{selectPrefixCls}-selection {
-    background-color: @input-bg-disabled;
+  &-disabled .@{__select-prefix-cls}-selection {
+    background-color: @bg-disabled-color;
     &:hover, &:active {
-      border-color: @input-border;
+      border-color: @border-disabled-color;
     }
   }
 
   &-selection--single {
-    height: 28px;
+    height: 34px;
     cursor: pointer;
 
-    .@{selectPrefixCls}-selection__rendered {
+    .@{__select-prefix-cls}-selection__rendered {
       display: block;
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
       padding-left: 10px;
       padding-right: 20px;
-      line-height: 26px;
+      line-height: 32px;
     }
 
-    .@{selectPrefixCls}-selection__clear {
+    .@{__select-prefix-cls}-selection__clear {
       font-weight: bold;
       position: absolute;
-      top: 4px;
+      top: 6px;
       right: 20px;
 
       &:after {
@@ -98,16 +96,16 @@
       }
     }
 
-    .@{selectPrefixCls}-selection__placeholder {
-      color: @input-color-placeholder;
+    .@{__select-prefix-cls}-selection__placeholder {
+      color: @text-helper-color;
     }
   }
 
-  &-disabled .@{selectPrefixCls}-selection__choice__remove {
-    color: @gray-dark;
+  &-disabled .@{__select-prefix-cls}-selection__choice__remove {
+    color: @text-disabled-color;
     cursor: default;
     &:hover {
-      color: @gray-dark;
+      color: @text-disabled-color;
     }
   }
 
@@ -120,19 +118,18 @@
     position: absolute;
     top: 0;
     left: 3px;
-    color: @input-color-placeholder;
+    color: @text-helper-color;
   }
 
   &-search--inline {
     float: left;
     width: 100%;
-    .@{selectPrefixCls}-search__field__wrap {
+    .@{__select-prefix-cls}-search__field__wrap {
       width: 100%;
     }
-    .@{selectPrefixCls}-search__field {
+    .@{__select-prefix-cls}-search__field {
       border: none;
       font-size: 100%;
-      //margin-top: 5px;
       background: transparent;
       outline: 0;
       width: 100%;
@@ -143,51 +140,51 @@
   }
 
   &-selection--multiple {
-    min-height: 28px;
+    min-height: 34px;
     cursor: text;
 
-    .@{selectPrefixCls}-search--inline {
+    .@{__select-prefix-cls}-search--inline {
       width: auto;
-      .@{selectPrefixCls}-search__field {
+      .@{__select-prefix-cls}-search__field {
         width: 0.75em;
       }
     }
 
-    .@{selectPrefixCls}-search__field__placeholder {
-      top: 6px;
+    .@{__select-prefix-cls}-search__field__placeholder {
+      top: 8px;
       left: 10px;
     }
 
-    .@{selectPrefixCls}-selection__rendered {
+    .@{__select-prefix-cls}-selection__rendered {
       overflow: hidden;
       text-overflow: ellipsis;
       padding-left: 6px;
       // padding-bottom: 4px;
     }
 
-    .@{selectPrefixCls}-selection__clear {
+    .@{__select-prefix-cls}-selection__clear {
       .selection__clear();
       margin-top: 5px;
       margin-right: 10px;
     }
 
     > ul > li {
-      margin-top: 3px;
-      height: 20px;
-      line-height: 20px;
+      margin-top: 5px;
+      height: 22px;
+      line-height: 22px;
     }
 
-    .@{selectPrefixCls}-selection__choice {
+    .@{__select-prefix-cls}-selection__choice {
       background-color: #f3f3f3;
       cursor: default;
       float: left;
-      padding: 0 20px 0 8px;
+      padding: 0 8px 0 8px;
       margin-right: 4px;
       max-width: 99%;
       position: relative;
     }
 
-    .@{selectPrefixCls}-selection__choice__remove {
+    .@{__select-prefix-cls}-selection__choice__remove {
       color: #919191;
       cursor: pointer;
       display: inline-block;
@@ -207,7 +204,7 @@
 
   &-dropdown {
     background-color: white;
-    border: 1px solid @input-border;
+    border: 1px solid @border-color;
     box-sizing: border-box;
     z-index: 1070;
     left: -9999px;
@@ -234,7 +231,7 @@
         margin: 0;
         padding: 0;
 
-        > li.@{selectPrefixCls}-dropdown-menu-item {
+        > li.@{__select-prefix-cls}-dropdown-menu-item {
           padding-left: 24px;
         }
       }
@@ -291,33 +288,33 @@
   &-dropdown-search {
     display: block;
     padding: 4px;
-    .@{selectPrefixCls}-search__field__wrap {
+    .@{__select-prefix-cls}-search__field__wrap {
       width: 100%;
     }
-    .@{selectPrefixCls}-search__field__placeholder {
+    .@{__select-prefix-cls}-search__field__placeholder {
       top: 4px;
     }
-    .@{selectPrefixCls}-search__field {
+    .@{__select-prefix-cls}-search__field {
       padding: 4px;
       width: 100%;
       box-sizing: border-box;
       border: 1px solid #d9d9d9;
-      border-radius: @input-radius;
+      border-radius: @input-border-radius;
       outline: none;
     }
-    &.@{selectPrefixCls}-search--hide {
+    &.@{__select-prefix-cls}-search--hide {
       display: none;
     }
   }
 
   &-open {
-    .@{selectPrefixCls}-arrow {
+    .@{__select-prefix-cls}-arrow {
       &:before {
           content: @arrow-up-content;
       }
     }
-    .@{selectPrefixCls}-selection {
-        border-color: @select-open-border-color;
+    .@{__select-prefix-cls}-selection {
+        border-color: @border-hover-color;
     }
   }
 }
