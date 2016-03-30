@@ -156,6 +156,10 @@ class Demo extends React.Component {
                 <Select value={this.state.secondCity} style={{width:150}} onChange={this.onSecondCityChange.bind(this)}>
                     {cityOptions}
                 </Select>
+                <p>Combo 模式</p>
+                <Select combobox={true}>
+                    {cityOptions}
+                </Select>
                 </div>
             </div>
         )
