@@ -102,7 +102,7 @@ class Demo extends React.Component {
                 <p>基本使用:</p>
                 <Select defaultValue="lucy" style={{width:200}} onChange={me.handleChange.bind(me)} allowClear={true} getPopupContainer={function() {
                     return document.getElementById("container")
-                }}>
+                }} dropdownClassName="kuma-select2-selected-has-icon">
                     <Option value="jack">Jack</Option>
                     <Option value="lucy">Lucy</Option>
                     <Option value="disabled" disabled>Disabled</Option>
