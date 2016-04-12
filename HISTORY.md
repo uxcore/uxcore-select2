@@ -2,6 +2,10 @@
 
 ---
 
+## 0.1.15
+
+`CHANGED` add defaultProps transitionName
+
 ## 0.1.12
 
 `CHANGED` update scaffold

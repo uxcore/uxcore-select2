@@ -9,7 +9,8 @@ class Select2 extends RcSelect {
 Select2.displayName = 'Select2';
 Select2.defaultProps = assign({}, RcSelect.defaultProps, {
     prefixCls: "kuma-select2",
-    optionLabelProp: "children"
+    optionLabelProp: "children",
+    transitionName: 'slideUp'
 });
 
 module.exports = Select2;
