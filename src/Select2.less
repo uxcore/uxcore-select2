@@ -28,11 +28,12 @@
   // arrow
   &-arrow {
     position: absolute;
-    top: 0;
+    top: 1px;
     right: 8px;
     line-height: 34px;
     font-family: @arrow-font-family;
-    color: #999;
+    color: @text-secondary-color;
+    font-size: 13px;
 
     * {
       display: none;
@@ -73,7 +74,7 @@
   }
 
   &-selection--single {
-    height: 34px;
+    height: 36px;
     cursor: pointer;
 
     .@{__select-prefix-cls}-selection__rendered {
@@ -83,14 +84,15 @@
       text-overflow: ellipsis;
       padding-left: 10px;
       padding-right: 20px;
-      line-height: 32px;
+      line-height: 34px;
     }
 
     .@{__select-prefix-cls}-selection__clear {
       font-weight: bold;
       position: absolute;
-      top: 6px;
-      right: 20px;
+      top: 8px;
+      right: 22px;
+      color: @text-secondary-color;
 
       &:after {
         content: '×'
