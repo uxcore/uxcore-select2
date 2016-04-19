@@ -2,6 +2,10 @@
 
 ---
 
+## 0.2.0
+
+`CHANGED` upgrade rc-select to ~6.1.0, `label` is removed
+
 ## 0.1.15
 
 `CHANGED` add defaultProps transitionName

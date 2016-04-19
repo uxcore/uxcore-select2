@@ -1,5 +1,5 @@
-let RcSelect = require('rc-select');
-let assign = require('object-assign');
+import RcSelect from 'rc-select';
+import assign from 'object-assign';
 
 class Select2 extends RcSelect {
     constructor(props) {
@@ -13,4 +13,4 @@ Select2.defaultProps = assign({}, RcSelect.defaultProps, {
     transitionName: 'slideUp'
 });
 
-module.exports = Select2;
+export default Select2;

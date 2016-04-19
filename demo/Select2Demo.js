@@ -116,7 +116,7 @@ class Demo extends React.Component {
                     <Option value="yiminghe">yiminghe</Option>
                 </Select>
                 <p>多选:</p>
-                <Select multiple style={{width:400}} defaultValue={['a10', 'c12']} onChange={me.handleChange.bind(me)}>
+                <Select multiple style={{width:400}} defaultValue={['a10', 'c12']} onChange={me.handleChange.bind(me)} allowClear={true}>
                     {children}
                 </Select>
                 <p>多选提示，提示项根据 ajax 获得</p>
@@ -127,19 +127,6 @@ class Demo extends React.Component {
                 <Select style={{width: '100%'}} searchPlaceholder="标签模式" tags onChange={me.handleChange.bind(me)}>
                     {tagChildren}
                 </Select>
-                {/*<p>分组</p>
-                <Select defaultValue="lucy"
-                    style={{width:200}}
-                    showSearch={false}
-                    onChange={me.handleChange.bind(me)}>
-                    <OptGroup label="Manager">
-                        <Option value="jack">jack</Option>
-                        <Option value="lucy">lucy</Option>
-                    </OptGroup>
-                    <OptGroup label="Engineer">
-                        <Option value="yiminghe">yiminghe</Option>
-                    </OptGroup>
-                </Select>*/}
                 <p>智能提示</p>
                 <Select combobox
                   style={{width:200}}
@@ -159,6 +146,13 @@ class Demo extends React.Component {
                 <p>Combo 模式</p>
                 <Select combobox={true}>
                     {cityOptions}
+                </Select>
+                <p>禁用</p>
+                <Select defaultValue="lucy" style={{width:200}} disabled={true}>
+                    <Option value="jack">Jack</Option>
+                    <Option value="lucy">Lucy</Option>
+                    <Option value="disabled" disabled>Disabled</Option>
+                    <Option value="yiminghe">yiminghe</Option>
                 </Select>
                 </div>
             </div>
