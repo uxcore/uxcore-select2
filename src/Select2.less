@@ -26,15 +26,15 @@
 
   // arrow
   &-arrow {
-    height: 34px;
+    height: 32px;
     position: absolute;
     top: 1px;
     right: 1px;
     width: 20px;
     b {
-      border-color: @text-primary-color transparent transparent transparent;
+      border-color: @text-thirdary-color transparent transparent transparent;
       border-style: solid;
-      border-width: 5px 4px 0 4px;
+      border-width: 4px 4px 0 4px;
       height: 0;
       width: 0;
       margin-left: -4px;
@@ -96,13 +96,14 @@
       text-overflow: ellipsis;
       padding-left: 10px;
       padding-right: 20px;
-      line-height: 36px;
+      line-height: 34px;
     }
 
     .@{__select-prefix-cls}-selection__clear {
       font-weight: bold;
       position: absolute;
-      top: 8px;
+      color: @text-thirdary-color;
+      top: 7px;
       right: 20px;
       &:after {
         content: '×'
@@ -408,7 +409,7 @@
   &-open {
     .@{__select-prefix-cls}-arrow b {
       border-color: transparent transparent #888 transparent;
-      border-width: 0 4px 5px 4px;
+      border-width: 0 4px 4px 4px;
     }
   }
 }
