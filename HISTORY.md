@@ -4,7 +4,8 @@
 
 ## 0.2.1
 
-`CHANGED` merge ver. 0.1.16
+* `CHANGED` merge ver. 0.1.16
+* `FIXED` fix dropdown z-index
 
 ## 0.2.0
 
