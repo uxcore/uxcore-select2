@@ -2,7 +2,7 @@
 
 ---
 
-## 0.2.1
+## 0.2.2
 
 * `CHANGED` merge ver. 0.1.16
 * `FIXED` fix dropdown z-index
