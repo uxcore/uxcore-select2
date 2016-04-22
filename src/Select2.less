@@ -430,3 +430,114 @@
     line-height: 32px;
   }
 }
+
+@keyframes slideUpIn {
+    0% {
+        opacity: 0;
+        transform-origin: 0 0;
+        transform: scaleY(.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform-origin: 0 0;
+        transform: scaleY(1);
+    }
+}
+
+@keyframes slideUpOut {
+    0% {
+        opacity: 1;
+        transform-origin: 0 0;
+        transform: scaleY(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform-origin: 0 0;
+        transform: scaleY(.8);
+    }
+}
+
+@keyframes slideDownIn {
+    0% {
+        opacity: 0;
+        transform-origin: 100% 100%;
+        transform: scaleY(.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform-origin: 100% 100%;
+        transform: scaleY(1);
+    }
+}
+
+@keyframes slideDownOut {
+    0% {
+        opacity: 1;
+        transform-origin: 100% 100%;
+        transform: scaleY(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform-origin: 100% 100%;
+        transform: scaleY(.8);
+    }
+}
+
+.@{__select-prefix-cls}-dropdown-placement-bottomLeft {
+  &.slideUp-enter,
+  &.slideUp-appear {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleY(.8);
+    animation-timing-function: ease;
+    animation-duration: .3s;
+  }
+  &.slideUp-enter-active,
+  &.slideUp-appear-active {
+    visibility: visible;
+    animation-name: slideUpIn;
+  }
+  &.slideUp-leave {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleY(1);
+    animation-timing-function: ease;
+    animation-duration: .3s;
+  }
+  &.slideUp-leave-active {
+    visibility: visible;
+    animation-name: slideUpOut;
+  }
+}
+
+.@{__select-prefix-cls}-dropdown-placement-topLeft {
+  &.slideUp-enter,
+  &.slideUp-appear {
+    opacity: 0;
+    transform-origin: 100% 100%;
+    transform: scaleY(.8);
+    animation-timing-function: ease;
+    animation-duration: .3s;
+  }
+  &.slideUp-enter-active,
+  &.slideUp-appear-active {
+    visibility: visible;
+    animation-name: slideDownIn;
+  }
+  &.slideUp-leave {
+    opacity: 1;
+    transform-origin: 100% 100%;
+    transform: scaleY(1);
+    animation-timing-function: ease;
+    animation-duration: .3s;
+  }
+  &.slideUp-leave-active {
+    visibility: visible;
+    animation-name: slideDownOut;
+  }
+}
+
