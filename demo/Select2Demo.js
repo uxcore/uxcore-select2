@@ -17,10 +17,6 @@ let cityData = {
   '江苏': ['南京', '苏州', '镇江']
 };
 
-function handleChange(value) {
-  console.log('selected ' + value);
-}
-
 class Demo extends React.Component {
     constructor(props) {
         super(props);
@@ -34,6 +30,11 @@ class Demo extends React.Component {
             cities: cityData[provinceData[0]],
             secondCity:cityData[provinceData[0]][0]
         };
+    }
+
+    handleChange(value) {
+      console.log('selected ' + value);
+      this.forceUpdate();
     }
 
     fetchData(value) {
@@ -96,38 +97,41 @@ class Demo extends React.Component {
             return <Option key={d[1]}>{d[0]}</Option>;
         });
         return (
-            <div>
+            <div className="demo" >
+                <div id="container">
                 <p>基本使用:</p>
-                <Select defaultValue="lucy" style={{width:200}} onChange={handleChange}>
+                <Select defaultValue="lucy" style={{width:200}} onChange={me.handleChange.bind(me)} allowClear={true} getPopupContainer={function() {
+                    return document.getElementById("container")
+                }}>
                     <Option value="jack">Jack</Option>
                     <Option value="lucy">Lucy</Option>
                     <Option value="disabled" disabled>Disabled</Option>
                     <Option value="yiminghe">yiminghe</Option>
                 </Select>
                 <p>带搜索框:</p>
-                <Select defaultValue="lucy" showSearch={true} style={{width:200}} searchPlaceholder="输入" onChange={handleChange}>
+                <Select defaultValue="lucy" showSearch={true} style={{width:200}} searchPlaceholder="输入" onChange={me.handleChange.bind(me)}>
                     <Option value="jack">jack</Option>
                     <Option value="lucy">lucy</Option>
                     <Option value="disabled" disabled>disabled</Option>
                     <Option value="yiminghe">yiminghe</Option>
                 </Select>
                 <p>多选:</p>
-                <Select multiple style={{width:400}} defaultValue={['a10', 'c12']} onChange={handleChange}>
+                <Select multiple style={{width:400}} defaultValue={['a10', 'c12']} onChange={me.handleChange.bind(me)}>
                     {children}
                 </Select>
                 <p>多选提示，提示项根据 ajax 获得</p>
-                <Select multiple filterOption={false} style={{width: 400}} onSearch={me.handleSearch.bind(me)} onChange={handleChange}>
+                <Select multiple filterOption={false} style={{width: 400}} onSearch={me.handleSearch.bind(me)} onChange={me.handleChange.bind(me)}>
                     {ajaxOptions}
                 </Select>
                 <p>标签:(标签的意义是，用户可以通过键盘自己输入值，而不局限于传入的选项)</p>
-                <Select style={{width: '100%'}} searchPlaceholder="标签模式" tags onChange={handleChange}>
+                <Select style={{width: '100%'}} searchPlaceholder="标签模式" tags onChange={me.handleChange.bind(me)}>
                     {tagChildren}
                 </Select>
-                <p>分组</p>
+                {/*<p>分组</p>
                 <Select defaultValue="lucy"
                     style={{width:200}}
                     showSearch={false}
-                    onChange={handleChange}>
+                    onChange={me.handleChange.bind(me)}>
                     <OptGroup label="Manager">
                         <Option value="jack">jack</Option>
                         <Option value="lucy">lucy</Option>
@@ -135,7 +139,7 @@ class Demo extends React.Component {
                     <OptGroup label="Engineer">
                         <Option value="yiminghe">yiminghe</Option>
                     </OptGroup>
-                </Select>
+                </Select>*/}
                 <p>智能提示</p>
                 <Select combobox
                   style={{width:200}}
@@ -152,6 +156,7 @@ class Demo extends React.Component {
                 <Select value={this.state.secondCity} style={{width:150}} onChange={this.onSecondCityChange.bind(this)}>
                     {cityOptions}
                 </Select>
+                </div>
             </div>
         )
     }

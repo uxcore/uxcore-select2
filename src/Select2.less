@@ -13,7 +13,7 @@
   position: relative;
   vertical-align: middle;
   color: @black;
-  font-size: @font-size-base;
+  font-size: 12px;
 
   ul, li {
     margin: 0;
@@ -67,6 +67,7 @@
   }
 
   &-disabled .@{selectPrefixCls}-selection {
+    background-color: @input-bg-disabled;
     &:hover, &:active {
       border-color: @input-border;
     }
@@ -79,6 +80,7 @@
     .@{selectPrefixCls}-selection__rendered {
       display: block;
       overflow: hidden;
+      white-space: nowrap;
       text-overflow: ellipsis;
       padding-left: 10px;
       padding-right: 20px;
@@ -86,7 +88,14 @@
     }
 
     .@{selectPrefixCls}-selection__clear {
-      .selection__clear();
+      font-weight: bold;
+      position: absolute;
+      top: 4px;
+      right: 20px;
+
+      &:after {
+        content: '×'
+      }
     }
 
     .@{selectPrefixCls}-selection__placeholder {
@@ -308,7 +317,7 @@
       }
     }
     .@{selectPrefixCls}-selection {
-        border-color: @brand-primary;
+        border-color: @select-open-border-color;
     }
   }
 }
