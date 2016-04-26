@@ -2,6 +2,22 @@
 
 ---
 
+## 0.2.2
+
+`FIXED` fix dropdown z-index
+
+## 0.2.1
+
+`CHANGED` merge ver. 0.1.16
+
+## 0.2.0
+
+`CHANGED` upgrade rc-select to ~6.1.0, `label` is removed
+
+## 0.1.15
+
+`CHANGED` add defaultProps transitionName
+
 ## 0.1.12
 
 `CHANGED` update scaffold

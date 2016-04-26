@@ -1,5 +1,5 @@
-let RcSelect = require('rc-select');
-let assign = require('object-assign');
+import RcSelect from 'rc-select';
+import assign from 'object-assign';
 
 class Select2 extends RcSelect {
     constructor(props) {
@@ -9,7 +9,8 @@ class Select2 extends RcSelect {
 Select2.displayName = 'Select2';
 Select2.defaultProps = assign({}, RcSelect.defaultProps, {
     prefixCls: "kuma-select2",
-    optionLabelProp: "children"
+    optionLabelProp: "children",
+    transitionName: 'slideUp'
 });
 
-module.exports = Select2;
+export default Select2;
