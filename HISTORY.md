@@ -2,6 +2,10 @@
 
 ---
 
+## 0.2.3
+
+`NEW` add animation
+
 ## 0.2.2
 
 `FIXED` fix dropdown z-index
