@@ -104,7 +104,7 @@ class Demo extends React.Component {
                     return document.getElementById("container")
                 }} dropdownClassName="kuma-select2-selected-has-icon">
                     <Option value="jack">Jack</Option>
-                    <Option value="lucy">Lucy</Option>
+                    <Option value="lucy">LucyLucyLucyLucyLucyLucyLucyLucy</Option>
                     <Option value="disabled" disabled>Disabled</Option>
                     <Option value="yiminghe">yiminghe</Option>
                 </Select>

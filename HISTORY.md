@@ -2,6 +2,10 @@
 
 ---
 
+## 0.2.4
+
+`FIX` fix style bug when option text is too long. 
+
 ## 0.2.3
 
 `NEW` add animation
