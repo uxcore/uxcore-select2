@@ -2,6 +2,11 @@
 
 ---
 
+## 0.2.5
+
+`FIX` fix multiple style bug
+`CHANGED` remove submodule
+
 ## 0.2.4
 
 `FIX` fix style bug when option text is too long. 
