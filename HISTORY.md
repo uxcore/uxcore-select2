@@ -2,6 +2,9 @@
 
 ---
 
+## 0.2.6
+`NEW` add inline style 
+
 ## 0.2.5
 
 `FIX` fix multiple style bug

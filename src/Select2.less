@@ -11,7 +11,7 @@
   display: inline-block;
   position: relative;
   vertical-align: middle;
-  color: #666;
+  color: @text-secondary-color;
 
   ul, li {
     margin: 0;
@@ -32,16 +32,17 @@
     right: 1px;
     width: 20px;
     b {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+      width: 0;
+      height: 0;
       border-color: @text-thirdary-color transparent transparent transparent;
       border-style: solid;
       border-width: 4px 4px 0 4px;
-      height: 0;
-      width: 0;
-      margin-left: -4px;
-      margin-top: -2px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
     }
   }
 
@@ -161,7 +162,6 @@
       border: none;
       font-size: 100%;
       line-height: 16px;
-      //margin-top: 5px;
       background: transparent;
       outline: 0;
       width: 100%;
@@ -351,7 +351,7 @@
       }
 
       &-item-group-title {
-        color: #999;
+        color: @text-thirdary-color;
         line-height: 1.5;
         padding: 8px 10px;
         border-bottom: 1px solid #dedede;
@@ -363,7 +363,7 @@
         display: block;
         padding: 7px 10px;
         font-weight: normal;
-        color: #666666;
+        color: @text-secondary-color;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -441,6 +441,39 @@
       line-height: 32px;
     }
   }
+}
+
+.@{__select-prefix-cls}-inline {
+  z-index: 2;
+  .@{__select-prefix-cls}-selection {
+    border: 0 none;
+    &__rendered {
+      display: inline-block;
+      padding: 0 10px;
+      height: 36px;
+    }
+    &__placeholder {
+      position: static;
+    }
+    &-selected-value {
+      padding-right: 0;
+    }
+  }
+  &.@{__select-prefix-cls}-open {
+    .@{__select-prefix-cls}-selection {
+      border: 1px solid @border-color;
+      border-bottom-color: #fff;
+    }
+  }
+  .@{__select-prefix-cls}-arrow {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+.@{__select-prefix-cls}-inline-dropdown {
+  z-index: 1;
+  box-shadow: none;
 }
 
 @keyframes slideUpIn {
