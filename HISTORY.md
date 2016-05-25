@@ -2,6 +2,9 @@
 
 ---
 
+## 0.2.7
+`CHANGED` add IE10/11 css hack to fix input width bug.
+
 ## 0.2.6
 `NEW` add inline style 
 
