@@ -2,6 +2,10 @@
 
 ---
 
+## 0.2.8
+`CHANGED` new dev tool
+`CHANGED` repository
+
 ## 0.2.7
 `CHANGED` add IE10/11 css hack to fix input width bug.
 
