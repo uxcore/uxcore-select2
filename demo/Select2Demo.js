@@ -105,7 +105,6 @@ class Demo extends React.Component {
         return (
             <div className="demo" >
                 <div id="container">
-                    <input className="test" value={this.state.input1} onChange={this.onTextChange.bind(this)}/>
                     <p>基本使用:</p>
                     <Select placeholder="请选择" style={{width:200}} onChange={me.handleChange.bind(me)} allowClear={true} getPopupContainer={function() {
                         return document.getElementById("container")

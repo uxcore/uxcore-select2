@@ -12,7 +12,7 @@ uxcore-select2 ui component for react
 $ git clone https://github.com/uxcore/uxcore-select2
 $ cd uxcore-select2
 $ npm install
-$ gulp server
+$ npm start
 ```
 
 ## Usage

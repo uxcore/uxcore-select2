@@ -7,4 +7,4 @@
  */
 
  var Demo = require('./Select2Demo');
- ReactDOM.render(<Demo/>, document.getElementById('UXCoreDemo'));
+ ReactDOM.render(<Demo />, document.getElementById('UXCoreDemo'));
