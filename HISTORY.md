@@ -2,6 +2,10 @@
 
 ---
 
+## 0.3.1
+
+`FIXED` fix selected value style bug
+
 ## 0.3.0
 
 `CHANGED` update dependency `rc-select` to ~6.4.0
