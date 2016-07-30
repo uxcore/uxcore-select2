@@ -109,7 +109,7 @@
       font-weight: bold;
       position: absolute;
       color: @text-thirdary-color;
-      top: 0;
+      top: 7px;
       right: 20px;
       &:after {
         content: '×'
@@ -171,7 +171,7 @@
     .@{__select-prefix-cls}-search__field__mirror {
       position: absolute;
       top: -999px;
-      left: 0; 
+      left: 0;
       white-space: pre;
     }
     .@{__select-prefix-cls}-selection-selected-value {
@@ -375,7 +375,7 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        
+
         &-active {
           background-color: @brand-primary-lighter;
           cursor: pointer;
@@ -485,59 +485,59 @@
 }
 
 @keyframes slideUpIn {
-    0% {
-        opacity: 0;
-        transform-origin: 0 0;
-        transform: scaleY(.8);
-    }
+  0% {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleY(.8);
+  }
 
-    100% {
-        opacity: 1;
-        transform-origin: 0 0;
-        transform: scaleY(1);
-    }
+  100% {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleY(1);
+  }
 }
 
 @keyframes slideUpOut {
-    0% {
-        opacity: 1;
-        transform-origin: 0 0;
-        transform: scaleY(1);
-    }
+  0% {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleY(1);
+  }
 
-    100% {
-        opacity: 0;
-        transform-origin: 0 0;
-        transform: scaleY(.8);
-    }
+  100% {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleY(.8);
+  }
 }
 
 @keyframes slideDownIn {
-    0% {
-        opacity: 0;
-        transform-origin: 100% 100%;
-        transform: scaleY(.8);
-    }
+  0% {
+    opacity: 0;
+    transform-origin: 100% 100%;
+    transform: scaleY(.8);
+  }
 
-    100% {
-        opacity: 1;
-        transform-origin: 100% 100%;
-        transform: scaleY(1);
-    }
+  100% {
+    opacity: 1;
+    transform-origin: 100% 100%;
+    transform: scaleY(1);
+  }
 }
 
 @keyframes slideDownOut {
-    0% {
-        opacity: 1;
-        transform-origin: 100% 100%;
-        transform: scaleY(1);
-    }
+  0% {
+    opacity: 1;
+    transform-origin: 100% 100%;
+    transform: scaleY(1);
+  }
 
-    100% {
-        opacity: 0;
-        transform-origin: 100% 100%;
-        transform: scaleY(.8);
-    }
+  100% {
+    opacity: 0;
+    transform-origin: 100% 100%;
+    transform: scaleY(.8);
+  }
 }
 
 .@{__select-prefix-cls}-dropdown-placement-bottomLeft {
