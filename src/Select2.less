@@ -330,8 +330,6 @@
     top: -9999px;
     position: absolute;
     outline: none;
-    max-height: 250px;
-    overflow-y: auto;
 
     &-hidden {
       display: none;
@@ -343,7 +341,9 @@
       padding: 0;
       list-style: none;
       z-index: 9999;
-
+      max-height: 250px;
+      overflow-y: auto;
+    
       > li {
         margin: 0;
         padding: 0;
