@@ -2,6 +2,10 @@
 
 ---
 
+## 0.3.4
+
+`FIXED` placeholder style bug in multiple mode
+
 ## 0.3.3
 
 `FIXED` dropdown menu will be hidden when drag scrollbar in IE. [#15](https://github.com/uxcore/uxcore-select2/issues/15)

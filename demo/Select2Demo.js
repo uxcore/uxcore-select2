@@ -122,7 +122,7 @@ class Demo extends React.Component {
                         <Option value="yiminghe">yiminghe</Option>
                     </Select>
                     <p>多选:</p>
-                    <Select multiple style={{width:400}} defaultValue={['a10', 'c12']} onChange={me.handleChange.bind(me)} allowClear={true}>
+                    <Select multiple style={{width:400}} defaultValue={['a10', 'c12']} placeholder="输入" onChange={me.handleChange.bind(me)} allowClear={true}>
                         {children}
                     </Select>
                     <p>多选提示，提示项根据 ajax 获得</p>
