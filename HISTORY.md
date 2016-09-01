@@ -2,6 +2,10 @@
 
 ---
 
+## 0.3.5
+
+`FIXED` selected value text overflow (uxcore [#13](https://github.com/uxcore/uxcore/issues/13))
+
 ## 0.3.4
 
 `FIXED` placeholder style bug in multiple mode
