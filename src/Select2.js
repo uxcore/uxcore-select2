@@ -6,7 +6,7 @@ Select2.displayName = 'Select2';
 Select2.defaultProps = assign({}, RcSelect.defaultProps, {
   prefixCls: 'kuma-select2',
   optionLabelProp: 'children',
-  transitionName: 'slideUp',
+  transitionName: 'selectSlideUp',
 });
 
 export default Select2;

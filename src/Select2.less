@@ -536,55 +536,55 @@
 
     100% {
         opacity: 0;
-        transform: scaleY(0, -10px);
+        transform: translate(0, -10px);
     }
 }
 
 .@{__select-prefix-cls}-dropdown-placement-bottomLeft {
-  &.slideUp-enter,
-  &.slideUp-appear {
+  &.selectSlideUp-enter,
+  &.selectSlideUp-appear {
     opacity: 0;
     transform: translate(0, 10px);
     animation-timing-function: ease-out;
     animation-duration: .3s;
   }
-  &.slideUp-enter-active,
-  &.slideUp-appear-active {
+  &.selectSlideUp-enter-active,
+  &.selectSlideUp-appear-active {
     visibility: visible;
     animation-name: selectSlideInDown;
   }
-  &.slideUp-leave {
+  &.selectSlideUp-leave {
     opacity: 1;
     transform: translate(0, 0);
     animation-timing-function: ease-out;
     animation-duration: .3s;
   }
-  &.slideUp-leave-active {
+  &.selectSlideUp-leave-active {
     visibility: visible;
     animation-name: selectSlideOutDown;
   }
 }
 
 .@{__select-prefix-cls}-dropdown-placement-topLeft {
-  &.slideUp-enter,
-  &.slideUp-appear {
+  &.selectSlideUp-enter,
+  &.selectSlideUp-appear {
     opacity: 0;
     transform: translate(0, -10px);
-    animation-timing-function: ease;
+    animation-timing-function: ease-out;
     animation-duration: .3s;
   }
-  &.slideUp-enter-active,
-  &.slideUp-appear-active {
+  &.selectSlideUp-enter-active,
+  &.selectSlideUp-appear-active {
     visibility: visible;
     animation-name: selectSlideInUp;
   }
-  &.slideUp-leave {
+  &.selectSlideUp-leave {
     opacity: 1;
     transform: translate(0, 0);
-    animation-timing-function: ease;
+    animation-timing-function: ease-out;
     animation-duration: .3s;
   }
-  &.slideUp-leave-active {
+  &.selectSlideUp-leave-active {
     visibility: visible;
     animation-name: selectSlideOutUp;
   }
