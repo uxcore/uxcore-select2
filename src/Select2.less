@@ -492,59 +492,51 @@
   box-shadow: none;
 }
 
-@keyframes slideUpIn {
+@keyframes selectSlideInDown {
     0% {
         opacity: 0;
-        transform-origin: 0 0;
-        transform: scaleY(.8);
+        transform: translate(0, 10px);
     }
 
     100% {
         opacity: 1;
-        transform-origin: 0 0;
-        transform: scaleY(1);
+        transform: translate(0, 0);
     }
 }
 
-@keyframes slideUpOut {
+@keyframes selectSlideOutDown {
     0% {
         opacity: 1;
-        transform-origin: 0 0;
-        transform: scaleY(1);
+        transform: translate(0, 0);
     }
 
     100% {
         opacity: 0;
-        transform-origin: 0 0;
-        transform: scaleY(.8);
+        transform: translate(0, 10px);
     }
 }
 
-@keyframes slideDownIn {
+@keyframes selectSlideInUp {
     0% {
         opacity: 0;
-        transform-origin: 100% 100%;
-        transform: scaleY(.8);
+        transform: translate(0, -10px);
     }
 
     100% {
         opacity: 1;
-        transform-origin: 100% 100%;
-        transform: scaleY(1);
+        transform: translate(0, 0);
     }
 }
 
-@keyframes slideDownOut {
+@keyframes selectSlideOutUp {
     0% {
         opacity: 1;
-        transform-origin: 100% 100%;
-        transform: scaleY(1);
+        transform: translate(0, 0);
     }
 
     100% {
         opacity: 0;
-        transform-origin: 100% 100%;
-        transform: scaleY(.8);
+        transform: scaleY(0, -10px);
     }
 }
 
@@ -552,26 +544,24 @@
   &.slideUp-enter,
   &.slideUp-appear {
     opacity: 0;
-    transform-origin: 0 0;
-    transform: scaleY(.8);
-    animation-timing-function: ease;
+    transform: translate(0, 10px);
+    animation-timing-function: ease-out;
     animation-duration: .3s;
   }
   &.slideUp-enter-active,
   &.slideUp-appear-active {
     visibility: visible;
-    animation-name: slideUpIn;
+    animation-name: selectSlideInDown;
   }
   &.slideUp-leave {
     opacity: 1;
-    transform-origin: 0 0;
-    transform: scaleY(1);
-    animation-timing-function: ease;
+    transform: translate(0, 0);
+    animation-timing-function: ease-out;
     animation-duration: .3s;
   }
   &.slideUp-leave-active {
     visibility: visible;
-    animation-name: slideUpOut;
+    animation-name: selectSlideOutDown;
   }
 }
 
@@ -579,26 +569,24 @@
   &.slideUp-enter,
   &.slideUp-appear {
     opacity: 0;
-    transform-origin: 100% 100%;
-    transform: scaleY(.8);
+    transform: translate(0, -10px);
     animation-timing-function: ease;
     animation-duration: .3s;
   }
   &.slideUp-enter-active,
   &.slideUp-appear-active {
     visibility: visible;
-    animation-name: slideDownIn;
+    animation-name: selectSlideInUp;
   }
   &.slideUp-leave {
     opacity: 1;
-    transform-origin: 100% 100%;
-    transform: scaleY(1);
+    transform: translate(0, 0);
     animation-timing-function: ease;
     animation-duration: .3s;
   }
   &.slideUp-leave-active {
     visibility: visible;
-    animation-name: slideDownOut;
+    animation-name: selectSlideOutUp;
   }
 }
 

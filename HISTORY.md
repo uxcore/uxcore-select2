@@ -2,6 +2,10 @@
 
 ---
 
+## 0.4.0
+
+`NEW` new animation
+
 ## 0.3.5
 
 `FIXED` selected value text overflow (uxcore [#13](https://github.com/uxcore/uxcore/issues/13))
