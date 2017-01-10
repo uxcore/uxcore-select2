@@ -43,6 +43,7 @@
       border-color: @text-thirdary-color transparent transparent transparent;
       border-style: solid;
       border-width: 4px 4px 0 4px;
+      transition: all .3s @transition-ease;
     }
   }
 
@@ -374,6 +375,7 @@
       }
 
       li.@{__select-prefix-cls}-dropdown-menu-item {
+        transition: all 0.15s @transition-ease;
         margin: 0;
         position: relative;
         display: block;
@@ -404,7 +406,7 @@
       }
 
       li.@{__select-prefix-cls}-dropdown-menu-item-selected {
-        color: @brand-primary;
+        color: @brand-primary;        
       }
     }
   }
@@ -433,8 +435,10 @@
 
   &-open {
     .@{__select-prefix-cls}-arrow b {
-      border-color: transparent transparent #888 transparent;
-      border-width: 0 4px 4px 4px;
+      // border-color: transparent transparent #888 transparent;
+      // border-width: 0 4px 4px 4px;
+      transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
     }
   }
 }
