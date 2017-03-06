@@ -2,6 +2,10 @@
 
 ---
 
+## 0.4.4
+
+`CHANGED` box-shadow & border-radius change
+
 ## 0.4.0
 
 `NEW` new animation
