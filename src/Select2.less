@@ -1,5 +1,6 @@
 @__select-prefix-cls: kuma-select2;
 
+
 .effect() {
   animation-duration: .3s;
   animation-fill-mode: both;
@@ -388,7 +389,7 @@
         text-overflow: ellipsis;
         
         &-active {
-          background-color: @brand-primary-lighter;
+          background-color: @normal-alpha-9;
           cursor: pointer;
         }
 
@@ -407,7 +408,8 @@
       }
 
       li.@{__select-prefix-cls}-dropdown-menu-item-selected {
-        color: @brand-primary;        
+        color: @dark-alpha-1;     
+        background: @normal-alpha-9;   
       }
     }
   }
@@ -451,6 +453,7 @@
       content: "\e611";
       display: block;
       position: absolute;
+      color: @brand-primary;
       right: 10px;
       top: 0px;
       font-family: kuma!important;
