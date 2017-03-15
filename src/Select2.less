@@ -553,7 +553,7 @@
   &.selectSlideUp-appear {
     opacity: 0;
     transform: translate(0, 10px);
-    animation-timing-function: ease-out;
+    animation-timing-function: @transition-ease;
     animation-duration: .3s;
   }
   &.selectSlideUp-enter-active,
@@ -564,7 +564,7 @@
   &.selectSlideUp-leave {
     opacity: 1;
     transform: translate(0, 0);
-    animation-timing-function: ease-out;
+    animation-timing-function: @transition-ease;
     animation-duration: .3s;
   }
   &.selectSlideUp-leave-active {
@@ -578,7 +578,7 @@
   &.selectSlideUp-appear {
     opacity: 0;
     transform: translate(0, -10px);
-    animation-timing-function: ease-out;
+    animation-timing-function: @transition-ease;
     animation-duration: .3s;
   }
   &.selectSlideUp-enter-active,
@@ -589,7 +589,7 @@
   &.selectSlideUp-leave {
     opacity: 1;
     transform: translate(0, 0);
-    animation-timing-function: ease-out;
+    animation-timing-function: @transition-ease;
     animation-duration: .3s;
   }
   &.selectSlideUp-leave-active {
@@ -597,4 +597,5 @@
     animation-name: selectSlideOutUp;
   }
 }
+
 

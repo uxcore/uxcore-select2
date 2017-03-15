@@ -111,6 +111,7 @@ class Demo extends React.Component {
             style={{ width: 200 }}
             onChange={me.handleChange.bind(me)}
             allowClear
+            transitionName="threeFallV"
             getPopupContainer={function () {
               return document.getElementById('container');
             }} dropdownClassName="kuma-select2-selected-has-icon"
