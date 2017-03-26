@@ -111,7 +111,6 @@ class Demo extends React.Component {
             style={{ width: 200 }}
             onChange={me.handleChange.bind(me)}
             allowClear
-            transitionName="threeFallV"
             getPopupContainer={function () {
               return document.getElementById('container');
             }} dropdownClassName="kuma-select2-selected-has-icon"
@@ -188,10 +187,8 @@ class Demo extends React.Component {
             className="kuma-select2-inline"
             placeholder="请选择"
             showSearch={false}
-            transitionName=""
             dropdownMatchSelectWidth={false}
             dropdownClassName="kuma-select2-inline-dropdown"
-            dropdownAlign={{ offset: [0, -1] }}
             dropdownStyle={{ width: 200 }}
           >
             <Option value="jack">Jack</Option>

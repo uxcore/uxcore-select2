@@ -2,6 +2,10 @@
 
 ---
 
+## 0.4.7
+
+`CHANGED` style adjustment
+
 ## 0.4.4
 
 `CHANGED` box-shadow & border-radius change

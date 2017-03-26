@@ -41,7 +41,7 @@
       margin: auto;
       width: 0;
       height: 0;
-      border-color: @text-thirdary-color transparent transparent transparent;
+      border-color: @normal-alpha-4 transparent transparent transparent;
       border-style: solid;
       border-width: 4px 4px 0 4px;
       transition: all .3s @transition-ease;
@@ -67,7 +67,7 @@
      &__placeholder {
       position: absolute;
       top: 0;
-      color: #aaa;
+      color: @normal-alpha-4;
       line-height: 34px;
     }
   }
@@ -133,10 +133,15 @@
     cursor: not-allowed;
 
     .@{__select-prefix-cls}-selection {
+      border-color: @border-disabled-color;
       background-color: @bg-disabled-color;
       &:hover, &:active {
         border-color: @border-disabled-color;
       }
+    }
+
+    .@{__select-prefix-cls}-arrow b {
+      border-color: @normal-alpha-6 transparent transparent transparent;
     }
 
     .@{__select-prefix-cls}-selection--single,
@@ -242,7 +247,7 @@
       &:hover {
         .@{__select-prefix-cls}-selection__choice__remove {
           opacity: 1;
-          transform: scale(1);
+          transform: scale(0.8);
         }
         .@{__select-prefix-cls}-selection__choice__content {
           margin-left: -8px;
@@ -253,7 +258,8 @@
   }
 
   & .@{__select-prefix-cls}-selection__choice {
-    background-color: #f3f3f3;
+    color: @dark-alpha-2;
+    background-color: @normal-alpha-7;
     border-radius: 4px;
     float: left;
     padding: 0 15px;
@@ -314,6 +320,9 @@
       cursor: pointer;
       font-weight: bold;
       padding: 0 4px 0 0;
+      font-family: 'uxcore';
+      -webkit-font-smoothing: antialiased;
+      font-style: normal;
       position: absolute;
       opacity: 0;
       transform: scale(0);
@@ -321,7 +330,7 @@
       right: 2px;
       transition: opacity .3s, transform .3s;
       &:before {
-        content: '×'
+        content: "\e6b0";
       }
 
       &:hover {
@@ -383,18 +392,19 @@
         display: block;
         padding: 7px 10px;
         font-weight: normal;
-        color: @text-secondary-color;
+        color: @dark-alpha-3;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         
         &-active {
           background-color: @normal-alpha-9;
+          color: @dark-alpha-2;
           cursor: pointer;
         }
 
         &-disabled {
-          color: #ccc;
+          color: @text-disabled-color;
           cursor: not-allowed;
         }
 
@@ -438,8 +448,7 @@
 
   &-open {
     .@{__select-prefix-cls}-arrow b {
-      // border-color: transparent transparent #888 transparent;
-      // border-width: 0 4px 4px 4px;
+      border-color: @normal-alpha-3 transparent transparent transparent;
       transform: rotate(180deg);
       -ms-transform: rotate(180deg);
     }
@@ -468,9 +477,12 @@
 }
 
 .@{__select-prefix-cls}-inline {
-  z-index: 2;
   .@{__select-prefix-cls}-selection {
-    border: 0 none;
+    background: transparent;
+    border-color: transparent;
+    &:hover {
+      border-color: transparent;
+    }
     &__rendered {
       display: inline-block;
       padding: 0 10px;
@@ -481,23 +493,15 @@
     }
     &-selected-value {
       padding-right: 0;
+      position: static;
     }
   }
   &.@{__select-prefix-cls}-open {
     .@{__select-prefix-cls}-selection {
+      background: white;
       border: 1px solid @border-color;
-      border-bottom-color: #fff;
     }
   }
-  .@{__select-prefix-cls}-arrow {
-    position: relative;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-.@{__select-prefix-cls}-inline-dropdown {
-  z-index: 1;
-  box-shadow: none;
 }
 
 @keyframes selectSlideInDown {
