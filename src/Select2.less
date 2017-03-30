@@ -117,13 +117,18 @@
     }
 
     .@{__select-prefix-cls}-selection__clear {
-      font-weight: bold;
+      font-weight: normal;
       position: absolute;
-      color: @text-thirdary-color;
+      font-family: "uxcore";
+      color: @normal-alpha-5;
       top: 7px;
       right: 20px;
+      font-size: 14px;
       &:after {
-        content: '×'
+        content: "\e6ab";
+      }
+      &:hover {
+        color: @normal-alpha-4;
       }
     }
   }
