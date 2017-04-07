@@ -2,6 +2,10 @@
 
 ---
 
+## 0.4.8
+
+`CHANGED` inline style, remove open border
+
 ## 0.4.7
 
 `CHANGED` style adjustment

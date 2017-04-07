@@ -187,12 +187,13 @@ class Demo extends React.Component {
             className="kuma-select2-inline"
             placeholder="请选择"
             showSearch={false}
-            dropdownMatchSelectWidth={false}
             dropdownClassName="kuma-select2-inline-dropdown"
-            dropdownStyle={{ width: 200 }}
+            dropdownAlign={{
+              offset: [0, -3],
+            }}
           >
             <Option value="jack">Jack</Option>
-            <Option value="lucy">LucyLucyLucyLucyLucyLucyLucyLucy</Option>
+            <Option value="lucy">Lucy</Option>
             <Option value="disabled" disabled>Disabled</Option>
             <Option value="yiminghe">yiminghe</Option>
           </Select>
