@@ -187,6 +187,7 @@ class Demo extends React.Component {
             className="kuma-select2-inline"
             placeholder="请选择"
             showSearch={false}
+            dropdownMatchSelectWidth={false}
             dropdownClassName="kuma-select2-inline-dropdown"
             dropdownAlign={{
               offset: [0, -3],
