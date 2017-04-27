@@ -1,6 +1,6 @@
 {
  "name": "uxcore-select2",
- "version": "0.4.11",
+ "version": "0.4.12",
  "description": "select ui component for react",
  "main": "build/index.js",
  "scripts": {
