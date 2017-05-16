@@ -38,9 +38,10 @@ http://uxcore.github.io/select/
 |multiple | 支持多选 |  | false |
 |filterOption | 是否根据输入项进行筛选 |  | true |
 |tags | 可以把随意输入的条目作为tag，输入项不需要与下拉选项匹配 |  | false |
-|onSelect | 被选中时调用，参数为选中的option value值 | function | 无 |
-|onDeselect | 取消选中时调用，参数为选中的option value值，仅在multiple或tags模式下生效 | function | 无 |
+|onSelect | 被选中时调用，参数为选中的option value值 | function(value, option:Option) | 无 |
+|onDeselect | 取消选中时调用，参数为选中的option value值，仅在multiple或tags模式下生效 | function(value) | 无 |
 |onChange | 选中option，或input的value变化(combobox模式下)时，调用此函数 | function | 无 |
+|onSearch | 搜索框值发生变化时调用 | function(key) | noop |
 |allowClear | 显示清除按钮 |  | false |
 |placeholder | 选择框默认文字 | string | 无 |
 |searchPlaceholder | 搜索框默认文字 | string | 无 |
@@ -60,6 +61,7 @@ http://uxcore.github.io/select/
 |disabled | 是否禁用 | Boolean | false |
 |key | 如果react需要你设置此项，此项值与value的值相同，然后可以省略value设置 | String | |
 |value | 默认根据此属性值进行筛选 | String | - |
+|title | 如果你不满意自动生成的 title，你可以用这个 prop 来修改 | String | - |
 
 ### OptGroup props
 |参数|说明|类型|默认值|
