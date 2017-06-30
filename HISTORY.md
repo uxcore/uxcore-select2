@@ -2,6 +2,10 @@
 
 ---
 
+## 0.4.13
+
+`CHNAGED` update `rc-select` to ~6.8.0
+
 ## 0.4.10
 
 `FIXED` incorrect style
