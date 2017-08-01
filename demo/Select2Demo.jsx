@@ -108,6 +108,7 @@ class Demo extends React.Component {
           <p>基本使用:</p>
           <Select
             placeholder="请选择"
+            notFoundContent=""
             style={{ width: 200 }}
             onChange={me.handleChange.bind(me)}
             allowClear

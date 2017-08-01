@@ -2,6 +2,10 @@
 
 ---
 
+## 0.4.14
+
+`CHANGED` hide combobox arrow
+
 ## 0.4.13
 
 `CHNAGED` update `rc-select` to ~6.8.0
