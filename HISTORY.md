@@ -2,6 +2,10 @@
 
 ---
 
+## 0.4.15
+
+`FIXED` placeholder overflow
+
 ## 0.4.14
 
 `CHANGED` hide combobox arrow
