@@ -2,6 +2,10 @@
 
 ---
 
+## 0.4.16
+
+`NEW` add new prop `size`
+
 ## 0.4.15
 
 `FIXED` placeholder overflow

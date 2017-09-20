@@ -1,5 +1,5 @@
-const React = require('react');
-const Select = require('../src');
+import React from 'react';
+import Select from '../src';
 
 const { Option } = Select;
 
@@ -31,6 +31,7 @@ class Demo extends React.Component {
       ajaxData: [],
       cities: cityData[provinceData[0]],
       secondCity: cityData[provinceData[0]][0],
+      size: 'large',
     };
   }
 
@@ -105,8 +106,20 @@ class Demo extends React.Component {
     return (
       <div className="demo" >
         <div id="container">
+          <p>尺寸:</p>
+          <Select
+            size={this.state.size}
+            value={this.state.size}
+            style={{ width: 200 }}
+            onChange={(size) => { this.setState({ size }); }}
+          >
+            <Option value="large">large</Option>
+            <Option value="middle">middle</Option>
+            <Option value="small">small</Option>
+          </Select>
           <p>基本使用:</p>
           <Select
+            size={this.state.size}
             placeholder="请选择"
             notFoundContent=""
             style={{ width: 200 }}
@@ -122,18 +135,23 @@ class Demo extends React.Component {
             <Option value="yiminghe">yiminghe</Option>
           </Select>
           <p>带搜索框:</p>
-          <Select defaultValue="lucy" showSearch style={{ width: 200 }} searchPlaceholder="输入" onChange={me.handleChange.bind(me)}>
+          <Select
+            size={this.state.size} defaultValue="lucy" showSearch style={{ width: 200 }} searchPlaceholder="输入" onChange={me.handleChange.bind(me)}
+          >
             <Option value="jack">jack</Option>
             <Option value="lucy">lucy</Option>
             <Option value="disabled" disabled>disabled</Option>
             <Option value="yiminghe">yiminghe</Option>
           </Select>
           <p>多选:</p>
-          <Select multiple style={{ width: 400 }} defaultValue={['a10', 'c12']} placeholder="输入" onChange={me.handleChange.bind(me)} allowClear>
+          <Select
+            size={this.state.size} multiple style={{ width: 400 }} defaultValue={['a10', 'c12']} placeholder="输入" onChange={me.handleChange.bind(me)} allowClear
+          >
             {children}
           </Select>
           <p>多选提示，提示项根据 ajax 获得</p>
           <Select
+            size={this.state.size}
             multiple
             filterOption={false}
             style={{ width: 400 }}
@@ -143,11 +161,14 @@ class Demo extends React.Component {
             {ajaxOptions}
           </Select>
           <p>标签:(标签的意义是，用户可以通过键盘自己输入值，而不局限于传入的选项)</p>
-          <Select style={{ width: '100%' }} searchPlaceholder="标签模式" tags onChange={me.handleChange.bind(me)}>
+          <Select
+            size={this.state.size} style={{ width: '100%' }} searchPlaceholder="标签模式" tags onChange={me.handleChange.bind(me)}
+          >
             {tagChildren}
           </Select>
           <p>智能提示</p>
           <Select
+            size={this.state.size}
             combobox
             style={{ width: 200 }}
             onChange={this.handleMailChange.bind(this)}
@@ -158,6 +179,7 @@ class Demo extends React.Component {
           </Select>
           <p>联动</p>
           <Select
+            size={this.state.size}
             defaultValue={provinceData[0]}
             style={{ width: 150 }}
             onChange={this.handleProvinceChange.bind(this)}
@@ -166,6 +188,7 @@ class Demo extends React.Component {
           </Select>
           &nbsp;
           <Select
+            size={this.state.size}
             value={this.state.secondCity}
             style={{ width: 150 }}
             onChange={this.onSecondCityChange.bind(this)}
@@ -173,11 +196,15 @@ class Demo extends React.Component {
             {cityOptions}
           </Select>
           <p>Combo 模式</p>
-          <Select combobox>
+          <Select
+            size={this.state.size} combobox
+          >
             {cityOptions}
           </Select>
           <p>禁用</p>
-          <Select defaultValue="lucy" style={{ width: 200 }} disabled>
+          <Select
+            size={this.state.size} defaultValue="lucy" style={{ width: 200 }} disabled
+          >
             <Option value="jack">Jack</Option>
             <Option value="lucy">Lucy</Option>
             <Option value="disabled" disabled>Disabled</Option>
@@ -185,6 +212,7 @@ class Demo extends React.Component {
           </Select>
           <p>inline</p>
           <Select
+            size={this.state.size}
             className="kuma-select2-inline"
             placeholder="请选择"
             showSearch={false}
@@ -199,10 +227,11 @@ class Demo extends React.Component {
             <Option value="disabled" disabled>Disabled</Option>
             <Option value="yiminghe">yiminghe</Option>
           </Select>
+
         </div>
       </div>
     );
   }
 }
 
-module.exports = Demo;
+export default Demo;

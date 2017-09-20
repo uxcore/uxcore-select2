@@ -53,6 +53,7 @@ http://uxcore.github.io/select/
 |dropdownMatchSelectWidth|dropdown 部分是否和 select 部分同宽| boolean | true |
 |dropdownClassName | dropdown 部分的定制类名 | string | - |
 |notFoundContent   | 未找到选项时的提示文案   | string | not found |
+|size | 尺寸，枚举值 `large`, `small`, `middle` | string | large |
 
 
 ### Option props
