@@ -47,7 +47,6 @@ http://uxcore.github.io/select/
 |searchPlaceholder | 搜索框默认文字 | string | 无 |
 |optionFilterProp | 输入项过滤对应的 option 属性 | string | value |
 |combobox | 输入框自动提示模式 |  | false |
-|size | 选择框大小 | String | 无 |
 |optionLabelProp| 选择 Option 的哪个 prop 作为选择框中的显示。| string | 'children' |
 |getPopupContainer| 弹出的菜单渲染在哪个容器中 | function(trigger:Node):Node | function(){return document.body;}|
 |dropdownMatchSelectWidth|dropdown 部分是否和 select 部分同宽| boolean | true |
