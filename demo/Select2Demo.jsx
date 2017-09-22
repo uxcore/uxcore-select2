@@ -109,6 +109,7 @@ class Demo extends React.Component {
           <p>尺寸:</p>
           <Select
             size={this.state.size}
+            allowClear
             value={this.state.size}
             style={{ width: 200 }}
             onChange={(size) => { this.setState({ size }); }}

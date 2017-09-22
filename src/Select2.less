@@ -5,8 +5,6 @@
 @__select-trigger-label-height-middle: 24px;
 @__select-trigger-height-small: @trigger-height-small;
 @__select-trigger-label-height-small: 20px;
-
-
 .effect() {
   animation-duration: .3s;
   animation-fill-mode: both;
@@ -130,7 +128,7 @@
       position: absolute;
       font-family: "uxcore";
       color: @normal-alpha-5;
-      top: 7px;
+      top: (@__select-trigger-height-large - 22) / 2;
       right: 20px;
       font-size: 14px;
       &:after {
@@ -575,9 +573,11 @@
   .@{__select-prefix-cls}-selection {
     &--single {
       height: @__select-trigger-height-middle;
-      line-height: @__select-trigger-height-middle - 2;
       .@{__select-prefix-cls}-selection__rendered {
         line-height: @__select-trigger-height-middle - 2;
+      }
+      .@{__select-prefix-cls}-selection__clear {
+        top: (@__select-trigger-height-middle - 22) / 2;
       }
     }
     &--multiple {
@@ -603,9 +603,11 @@
   .@{__select-prefix-cls}-selection {
     &--single {
       height: @__select-trigger-height-small;
-      line-height: @__select-trigger-height-small - 2;
       .@{__select-prefix-cls}-selection__rendered {
         line-height: @__select-trigger-height-small - 2;
+      }
+      .@{__select-prefix-cls}-selection__clear {
+        top: (@__select-trigger-height-small - 22) / 2;
       }
     }
     &--multiple {
