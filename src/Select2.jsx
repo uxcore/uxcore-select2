@@ -26,7 +26,6 @@ Select2.defaultProps = {
   prefixCls: 'kuma-select2',
   optionLabelProp: 'children',
   transitionName: 'selectSlideUp',
-  notFoundContent: '',
 };
 
 Select2.Option = RcSelect.Option;
