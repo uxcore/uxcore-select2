@@ -111,7 +111,7 @@ class Demo extends React.Component {
             size={this.state.size}
             allowClear
             value={this.state.size}
-            style={{ width: 200 }}
+            style={{ width: '200px' }}
             onChange={(size) => { this.setState({ size }); }}
           >
             <Option value="large">large</Option>
@@ -123,12 +123,13 @@ class Demo extends React.Component {
             size={this.state.size}
             placeholder="请选择"
             notFoundContent=""
-            style={{ width: 200 }}
+            style={{ width: '200px' }}
             onChange={me.handleChange.bind(me)}
             allowClear
             getPopupContainer={function () {
               return document.getElementById('container');
-            }} dropdownClassName="kuma-select2-selected-has-icon"
+            }}
+            dropdownClassName="kuma-select2-selected-has-icon"
           >
             <Option value="jack">Jack</Option>
             <Option value="lucy">LucyLucyLucyLucyLucyLucyLucyLucy</Option>
@@ -137,7 +138,12 @@ class Demo extends React.Component {
           </Select>
           <p>带搜索框:</p>
           <Select
-            size={this.state.size} defaultValue="lucy" showSearch style={{ width: 200 }} searchPlaceholder="输入" onChange={me.handleChange.bind(me)}
+            size={this.state.size}
+            defaultValue="lucy"
+            showSearch
+            style={{ width: '200px' }}
+            searchPlaceholder="输入"
+            onChange={me.handleChange.bind(me)}
           >
             <Option value="jack">jack</Option>
             <Option value="lucy">lucy</Option>
@@ -146,7 +152,13 @@ class Demo extends React.Component {
           </Select>
           <p>多选:</p>
           <Select
-            size={this.state.size} multiple style={{ width: 400 }} defaultValue={['a10', 'c12']} placeholder="输入" onChange={me.handleChange.bind(me)} allowClear
+            size={this.state.size}
+            multiple
+            style={{ width: '400px' }}
+            defaultValue={['a10', 'c12']}
+            placeholder="输入"
+            onChange={me.handleChange.bind(me)}
+            allowClear
           >
             {children}
           </Select>
@@ -155,7 +167,7 @@ class Demo extends React.Component {
             size={this.state.size}
             multiple
             filterOption={false}
-            style={{ width: 400 }}
+            style={{ width: '400px' }}
             onSearch={me.handleSearch.bind(me)}
             onChange={me.handleChange.bind(me)}
           >
@@ -163,7 +175,11 @@ class Demo extends React.Component {
           </Select>
           <p>标签:(标签的意义是，用户可以通过键盘自己输入值，而不局限于传入的选项)</p>
           <Select
-            size={this.state.size} style={{ width: '100%' }} searchPlaceholder="标签模式" tags onChange={me.handleChange.bind(me)}
+            size={this.state.size}
+            style={{ width: '100%' }}
+            searchPlaceholder="标签模式"
+            tags
+            onChange={me.handleChange.bind(me)}
           >
             {tagChildren}
           </Select>
@@ -171,7 +187,7 @@ class Demo extends React.Component {
           <Select
             size={this.state.size}
             combobox
-            style={{ width: 200 }}
+            style={{ width: '200px' }}
             onChange={this.handleMailChange.bind(this)}
             filterOption={false}
             searchPlaceholder="请输入账户名"
@@ -182,7 +198,7 @@ class Demo extends React.Component {
           <Select
             size={this.state.size}
             defaultValue={provinceData[0]}
-            style={{ width: 150 }}
+            style={{ width: '150px' }}
             onChange={this.handleProvinceChange.bind(this)}
           >
             {provinceOptions}
@@ -191,20 +207,24 @@ class Demo extends React.Component {
           <Select
             size={this.state.size}
             value={this.state.secondCity}
-            style={{ width: 150 }}
+            style={{ width: '150px' }}
             onChange={this.onSecondCityChange.bind(this)}
           >
             {cityOptions}
           </Select>
           <p>Combo 模式</p>
           <Select
-            size={this.state.size} combobox
+            size={this.state.size}
+            combobox
           >
             {cityOptions}
           </Select>
           <p>禁用</p>
           <Select
-            size={this.state.size} defaultValue="lucy" style={{ width: 200 }} disabled
+            size={this.state.size}
+            defaultValue="lucy"
+            style={{ width: '200px' }}
+            disabled
           >
             <Option value="jack">Jack</Option>
             <Option value="lucy">Lucy</Option>

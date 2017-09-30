@@ -1,6 +1,7 @@
 import RcSelect from 'rc-select';
 import classnames from 'classnames';
 import React from 'react';
+import PropTypes from 'prop-types';
 
 
 class Select2 extends React.Component {
@@ -19,7 +20,7 @@ class Select2 extends React.Component {
 }
 Select2.displayName = 'Select2';
 Select2.propTypes = {
-  size: React.PropTypes.oneOf(['large', 'middle', 'small']),
+  size: PropTypes.oneOf(['large', 'middle', 'small']),
 };
 Select2.defaultProps = {
   size: 'large',
