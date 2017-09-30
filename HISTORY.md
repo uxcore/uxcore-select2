@@ -2,6 +2,10 @@
 
 ---
 
+## 0.4.20
+
+`CHANEGD` adapted for React@15.x
+
 ## 0.4.16
 
 `NEW` add new prop `size`
