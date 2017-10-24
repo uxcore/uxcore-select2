@@ -2,6 +2,10 @@
 
 ---
 
+## 0.4.21
+
+`CHANGED` export RcSelect
+
 ## 0.4.20
 
 `CHANEGD` adapted for React@15.x

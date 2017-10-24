@@ -19,6 +19,7 @@ class Select2 extends React.Component {
   }
 }
 Select2.displayName = 'Select2';
+Select2.RcSelect = RcSelect;
 Select2.propTypes = {
   size: PropTypes.oneOf(['large', 'middle', 'small']),
 };
