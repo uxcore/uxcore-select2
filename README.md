@@ -38,7 +38,7 @@ http://uxcore.github.io/select/
 |multiple | 支持多选 | bool  | false |
 |filterOption | 是否根据输入结果过滤选项，默认是使用 optionFilterProp 对应的 Option 属性来过滤  | bool/function(inputValue, Option) | true |
 |showSearch | 是否在单选模式下显示搜索 | bool | true |
-|tags | 可以把随意输入的条目作为tag，输入项不需要与下拉选项匹配 |  | false |
+|tags | 可以把随意输入的条目作为tag，输入项不需要与下拉选项匹配 | bool | false |
 |onSelect | 被选中时调用，参数为选中的option value值 | function(value, option:Option) | 无 |
 |onDeselect | 取消选中时调用，参数为选中的option value值，仅在multiple或tags模式下生效 | function(value) | 无 |
 |onChange | 选中option，或input的value变化(combobox模式下)时，调用此函数 | function | 无 |
