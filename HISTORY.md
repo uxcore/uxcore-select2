@@ -2,6 +2,10 @@
 
 ---
 
+## 0.4.22
+
+`CHANGED` optimize select-value paddingRight, use large one only when allowClear is true
+
 ## 0.4.21
 
 `CHANGED` export RcSelect

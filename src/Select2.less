@@ -12,7 +12,7 @@
 }
 
 .@{__select-prefix-cls} {
-  box-sizing: border-box;
+box-sizing: border-box;
   display: inline-block;
   position: relative;
   vertical-align: middle;
@@ -101,7 +101,12 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     max-width: 100%;
-    padding-right: 30px;
+    padding-right: 10px;
+  }
+  &-allow-clear {
+    .@{__select-prefix-cls}-selection-selected-value {
+      padding-right: 30px;
+    }
   }
   &-selection--single {
     height: @__select-trigger-height-large;
