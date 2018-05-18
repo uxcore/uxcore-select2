@@ -12,7 +12,7 @@
 }
 
 .@{__select-prefix-cls} {
-box-sizing: border-box;
+  box-sizing: border-box;
   display: inline-block;
   position: relative;
   vertical-align: middle;
@@ -80,6 +80,7 @@ box-sizing: border-box;
       max-width: 90%;
       overflow: hidden;
       text-overflow: ellipsis;
+      white-space: nowrap;
     }
   }
   &-focused &-selection {
@@ -448,7 +449,7 @@ box-sizing: border-box;
       color: @brand-primary;
       right: 10px;
       top: 0px;
-      font-family: uxcore!important;
+      font-family: uxcore !important;
       font-size: 16px;
       font-style: normal;
       -webkit-font-smoothing: antialiased;

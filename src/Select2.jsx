@@ -14,7 +14,10 @@ class Select2 extends React.Component {
       [`${me.props.prefixCls}-dropdown-${me.props.size}`]: !!me.props.size,
     });
     return (
-      <RcSelect {...this.props} className={className} dropdownClassName={dropdownClassName} />
+      <RcSelect
+        {...this.props} className={className}
+        dropdownClassName={dropdownClassName} onSearch={(key) => { this.forceUpdate(); this.props.onSearch(key); }}
+      />
     );
   }
 }
@@ -22,12 +25,14 @@ Select2.displayName = 'Select2';
 Select2.RcSelect = RcSelect;
 Select2.propTypes = {
   size: PropTypes.oneOf(['large', 'middle', 'small']),
+  onSearch: PropTypes.func,
 };
 Select2.defaultProps = {
   size: 'large',
   prefixCls: 'kuma-select2',
   optionLabelProp: 'children',
   transitionName: 'selectSlideUp',
+  onSearch: () => {},
 };
 
 Select2.Option = RcSelect.Option;

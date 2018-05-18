@@ -2,6 +2,10 @@
 
 ---
 
+## 0.4.23
+
+`FIXED` multiple mode placeholder text overflow
+
 ## 0.4.22
 
 `CHANGED` optimize select-value paddingRight, use large one only when allowClear is true
