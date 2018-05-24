@@ -2,7 +2,11 @@
 
 ---
 
-## 0.424
+## 0.4.25
+
+* `CHANGED` update `rc-select` to `^7.0.0`
+
+## 0.4.24
 
 * `CHANGED` adapt react@16.x
 
