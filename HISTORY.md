@@ -2,6 +2,10 @@
 
 ---
 
+## 0.424
+
+* `CHANGED` adapt react@16.x
+
 ## 0.4.23
 
 `FIXED` multiple mode placeholder text overflow

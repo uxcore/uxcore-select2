@@ -1,16 +1,16 @@
 import expect from 'expect.js';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Enzyme, { mount } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-15';
-import TestUtils, { Simulate } from 'react-dom/test-utils';
+import Adapter from 'enzyme-adapter-react-16';
 import Select2 from '../src';
 
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('Select2', () => {
   it('allows us to set props', () => {
-    const wrapper = mount(<Select2 prefixCls="kuma-select2" optionLabelProp="children" transitionName="slideUp" />);
+    const wrapper = mount(
+      <Select2 prefixCls="kuma-select2" optionLabelProp="children" transitionName="slideUp" />
+    );
     expect(wrapper.props().prefixCls).to.equal('kuma-select2');
     wrapper.setProps({ prefixCls: 'kuma-select2-test' });
     expect(wrapper.props().prefixCls).to.equal('kuma-select2-test');
