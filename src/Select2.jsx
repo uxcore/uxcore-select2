@@ -16,7 +16,8 @@ class Select2 extends React.Component {
     return (
       <RcSelect
         {...this.props} className={className}
-        dropdownClassName={dropdownClassName} onSearch={(key) => { this.forceUpdate(); this.props.onSearch(key); }}
+        dropdownClassName={dropdownClassName}
+        onSearch={(key) => { this.forceUpdate(); this.props.onSearch(key); }}
       />
     );
   }
