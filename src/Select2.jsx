@@ -3,7 +3,6 @@ import classnames from 'classnames';
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
 class Select2 extends React.Component {
   render() {
     const me = this;
@@ -15,12 +14,18 @@ class Select2 extends React.Component {
     });
     return (
       <RcSelect
-        {...this.props} className={className}
-        dropdownClassName={dropdownClassName} onSearch={(key) => { this.forceUpdate(); this.props.onSearch(key); }}
+        {...this.props}
+        className={className}
+        dropdownClassName={dropdownClassName}
+        onSearch={(key) => {
+          this.forceUpdate();
+          this.props.onSearch(key);
+        }}
       />
     );
   }
 }
+
 Select2.displayName = 'Select2';
 Select2.RcSelect = RcSelect;
 Select2.propTypes = {
