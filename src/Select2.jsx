@@ -38,11 +38,13 @@ class Select2 extends React.Component {
 }
 
 Select2.displayName = 'Select2';
-Select2.RcSelect = RcSelect;
+
+
 Select2.propTypes = {
   size: PropTypes.oneOf(['large', 'middle', 'small']),
   onSearch: PropTypes.func,
 };
+
 Select2.defaultProps = {
   size: 'large',
   prefixCls: 'kuma-select2',
@@ -51,6 +53,7 @@ Select2.defaultProps = {
   onSearch: () => {},
 };
 
+Select2.RcSelect = RcSelect;
 Select2.Option = RcSelect.Option;
 Select2.OptGroup = RcSelect.OptGroup;
 
