@@ -5,12 +5,16 @@ const { Option } = Select;
 
 const children = [];
 for (let i = 10; i < 36; i++) {
-  children.push(<Option key={i.toString(36) + i}>{i.toString(36) + i}</Option>);
+  children.push(<Option key={i.toString(36) + i}>
+    {i.toString(36) + i}
+  </Option>);
 }
 
 const tagChildren = [];
 for (let i = 10; i < 36; i++) {
-  tagChildren.push(<Option key={i.toString(36) + i}>{i.toString(36) + i}</Option>);
+  tagChildren.push(<Option key={i.toString(36) + i}>
+    {i.toString(36) + i}
+  </Option>);
 }
 
 const provinceData = ['浙江', '江苏'];
@@ -76,7 +80,11 @@ class Demo extends React.Component {
     } else {
       options = ['gmail.com', '163.com', 'qq.com'].map((domain) => {
         const email = `${value}@${domain}`;
-        return <Option key={email}>{email}</Option>;
+        return (
+          <Option key={email}>
+            {email}
+          </Option>
+        );
       });
     }
     this.setState({
@@ -99,14 +107,27 @@ class Demo extends React.Component {
 
   render() {
     const me = this;
-    const provinceOptions = provinceData.map(province =>
-      <Option key={province}>{province}</Option>);
-    const cityOptions = this.state.cities.map(city => <Option key={city}>{city}</Option>);
-    const ajaxOptions = me.state.ajaxData.map(d => <Option key={d[1]}>{d[0]}</Option>);
+    const provinceOptions = provinceData.map(province => (
+      <Option key={province}>
+        {province}
+      </Option>
+    ));
+    const cityOptions = this.state.cities.map(city => (
+      <Option key={city}>
+        {city}
+      </Option>
+    ));
+    const ajaxOptions = me.state.ajaxData.map(d => (
+      <Option key={d[1]}>
+        {d[0]}
+      </Option>
+    ));
     return (
-      <div className="demo" >
+      <div className="demo">
         <div id="container">
-          <p>尺寸:</p>
+          <p>
+            尺寸:
+          </p>
           <Select
             size={this.state.size}
             allowClear
@@ -114,29 +135,46 @@ class Demo extends React.Component {
             style={{ width: '200px' }}
             onChange={(size) => { this.setState({ size }); }}
           >
-            <Option value="large">large</Option>
-            <Option value="middle">middle</Option>
-            <Option value="small">small</Option>
+            <Option value="large">
+              large
+            </Option>
+            <Option value="middle">
+              middle
+            </Option>
+            <Option value="small">
+              small
+            </Option>
           </Select>
-          <p>基本使用:</p>
+          <p>
+            基本使用:
+          </p>
           <Select
             size={this.state.size}
             placeholder="请选择"
             notFoundContent=""
+            onSearch={(key) => { console.log(key); }}
             style={{ width: '200px' }}
             onChange={me.handleChange.bind(me)}
             allowClear
-            getPopupContainer={function () {
-              return document.getElementById('container');
-            }}
+            getPopupContainer={() => document.getElementById('container')}
             dropdownClassName="kuma-select2-selected-has-icon"
           >
-            <Option value="jack">Jack</Option>
-            <Option value="lucy">LucyLucyLucyLucyLucyLucyLucyLucy</Option>
-            <Option value="disabled" disabled>Disabled</Option>
-            <Option value="yiminghe">yiminghe</Option>
+            <Option value="jack">
+              Jack
+            </Option>
+            <Option value="lucy">
+              LucyLucyLucyLucyLucyLucyLucyLucy
+            </Option>
+            <Option value="disabled" disabled>
+              Disabled
+            </Option>
+            <Option value="yiminghe">
+              yiminghe
+            </Option>
           </Select>
-          <p>带搜索框:</p>
+          <p>
+            带搜索框:
+          </p>
           <Select
             size={this.state.size}
             defaultValue="lucy"
@@ -145,12 +183,22 @@ class Demo extends React.Component {
             searchPlaceholder="输入"
             onChange={me.handleChange.bind(me)}
           >
-            <Option value="jack">jack</Option>
-            <Option value="lucy">lucy</Option>
-            <Option value="disabled" disabled>disabled</Option>
-            <Option value="yiminghe">yiminghe</Option>
+            <Option value="jack">
+              jack
+            </Option>
+            <Option value="lucy">
+              lucy
+            </Option>
+            <Option value="disabled" disabled>
+              disabled
+            </Option>
+            <Option value="yiminghe">
+              yiminghe
+            </Option>
           </Select>
-          <p>多选:</p>
+          <p>
+            多选:
+          </p>
           <Select
             size={this.state.size}
             multiple
@@ -162,7 +210,9 @@ class Demo extends React.Component {
           >
             {children}
           </Select>
-          <p>多选提示，提示项根据 ajax 获得</p>
+          <p>
+            多选提示，提示项根据 ajax 获得
+          </p>
           <Select
             size={this.state.size}
             multiple
@@ -173,7 +223,9 @@ class Demo extends React.Component {
           >
             {ajaxOptions}
           </Select>
-          <p>标签:(标签的意义是，用户可以通过键盘自己输入值，而不局限于传入的选项)</p>
+          <p>
+            标签:(标签的意义是，用户可以通过键盘自己输入值，而不局限于传入的选项)
+          </p>
           <Select
             size={this.state.size}
             style={{ width: '100%' }}
@@ -183,7 +235,9 @@ class Demo extends React.Component {
           >
             {tagChildren}
           </Select>
-          <p>智能提示</p>
+          <p>
+            智能提示
+          </p>
           <Select
             size={this.state.size}
             combobox
@@ -194,7 +248,9 @@ class Demo extends React.Component {
           >
             {this.state.options}
           </Select>
-          <p>联动</p>
+          <p>
+            联动
+          </p>
           <Select
             size={this.state.size}
             defaultValue={provinceData[0]}
@@ -212,26 +268,40 @@ class Demo extends React.Component {
           >
             {cityOptions}
           </Select>
-          <p>Combo 模式</p>
+          <p>
+            Combo 模式
+          </p>
           <Select
             size={this.state.size}
             combobox
           >
             {cityOptions}
           </Select>
-          <p>禁用</p>
+          <p>
+            禁用
+          </p>
           <Select
             size={this.state.size}
             defaultValue="lucy"
             style={{ width: '200px' }}
             disabled
           >
-            <Option value="jack">Jack</Option>
-            <Option value="lucy">Lucy</Option>
-            <Option value="disabled" disabled>Disabled</Option>
-            <Option value="yiminghe">yiminghe</Option>
+            <Option value="jack">
+              Jack
+            </Option>
+            <Option value="lucy">
+              Lucy
+            </Option>
+            <Option value="disabled" disabled>
+              Disabled
+            </Option>
+            <Option value="yiminghe">
+              yiminghe
+            </Option>
           </Select>
-          <p>inline</p>
+          <p>
+            inline
+          </p>
           <Select
             size={this.state.size}
             className="kuma-select2-inline"
@@ -240,13 +310,26 @@ class Demo extends React.Component {
             dropdownMatchSelectWidth={false}
             dropdownClassName="kuma-select2-inline-dropdown"
             dropdownAlign={{
-              offset: [0, -3],
+              points: ['tr', 'br'],
+              offset: [0, 4],
+              overflow: {
+                adjustX: 0,
+                adjustY: 1,
+              },
             }}
           >
-            <Option value="jack">Jack</Option>
-            <Option value="lucy">Lucy</Option>
-            <Option value="disabled" disabled>Disabled</Option>
-            <Option value="yiminghe">yiminghe</Option>
+            <Option value="jack">
+              Jack
+            </Option>
+            <Option value="lucy">
+              Lucy
+            </Option>
+            <Option value="disabled" disabled>
+              Disabled
+            </Option>
+            <Option value="yiminghe">
+              yimingheyiminghe
+            </Option>
           </Select>
 
         </div>

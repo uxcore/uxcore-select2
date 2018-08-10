@@ -2,6 +2,10 @@
 
 ---
 
+## 8.1.0
+
+* `CHANEGD` fix rc-select version to `~8.1.0`
+
 ## 0.5.0
 
 * `CHANGED` adapt React 16
