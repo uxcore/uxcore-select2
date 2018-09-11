@@ -1,10 +1,11 @@
 @__selectPrefixCls: kuma-select2;
-@__select-trigger-height-large: @trigger-height-large;
-@__select-trigger-label-height-large: 24px;
-@__select-trigger-height-middle: @trigger-height-middle;
-@__select-trigger-label-height-middle: 24px;
-@__select-trigger-height-small: @trigger-height-small;
-@__select-trigger-label-height-small: 20px;
+@__selectTriggerHeightLarge: @trigger-height-large;
+@__selectTriggerLabelHeightLarge: 24px;
+@__selectTriggerHeightMiddle: @trigger-height-middle;
+@__selectTriggerLabelHeightMiddle: 24px;
+@__selectTriggerHeightSmall: @trigger-height-small;
+@__selectTriggerLabelHeightSmall: 20px;
+
 .effect() {
   animation-duration: .3s;
   animation-fill-mode: both;
@@ -28,7 +29,7 @@
     background-color: #fff;
   } // arrow
   &-arrow {
-    height: @__select-trigger-height-large - 4;
+    height: @__selectTriggerHeightLarge - 4;
     position: absolute;
     top: 1px;
     right: 1px;
@@ -110,7 +111,7 @@
     }
   }
   &-selection--single {
-    height: @__select-trigger-height-large;
+    height: @__selectTriggerHeightLarge;
     cursor: pointer;
     position: relative;
     .@{__selectPrefixCls}-selection__placeholder {
@@ -134,7 +135,7 @@
       position: absolute;
       font-family: "uxcore";
       color: @normal-alpha-5;
-      top: (@__select-trigger-height-large - 22) / 2;
+      top: (@__selectTriggerHeightLarge - 22) / 2;
       right: 20px;
       font-size: 14px;
       &:after {
@@ -194,7 +195,7 @@
     cursor: text;
   }
   &-selection--multiple {
-    min-height: @__select-trigger-height-large;
+    min-height: @__selectTriggerHeightLarge;
     .@{__selectPrefixCls}-search--inline {
       float: left;
       width: auto;
@@ -216,9 +217,9 @@
       padding-left: 8px;
       padding-bottom: 2px;
       >ul>li {
-        margin-top: (@__select-trigger-height-large - 2 - @__select-trigger-label-height-large) / 2;
-        height: @__select-trigger-label-height-large;
-        line-height: @__select-trigger-label-height-large;
+        margin-top: (@__selectTriggerHeightLarge - 2 - @__selectTriggerLabelHeightLarge) / 2;
+        height: @__selectTriggerLabelHeightLarge;
+        line-height: @__selectTriggerLabelHeightLarge;
       }
     }
   }
@@ -379,7 +380,7 @@
         margin: 0;
         position: relative;
         display: block;
-        padding: (@__select-trigger-height-large - 18)/2 10px;
+        padding: (@__selectTriggerHeightLarge - 18)/2 10px;
         font-weight: normal;
         color: @dark-alpha-3;
         white-space: nowrap;
@@ -578,71 +579,71 @@
 .@{__selectPrefixCls}-middle {
   .@{__selectPrefixCls}-selection {
     &--single {
-      height: @__select-trigger-height-middle;
+      height: @__selectTriggerHeightMiddle;
       .@{__selectPrefixCls}-selection__rendered {
-        line-height: @__select-trigger-height-middle - 2;
+        line-height: @__selectTriggerHeightMiddle - 2;
       }
       .@{__selectPrefixCls}-selection__clear {
-        top: (@__select-trigger-height-middle - 22) / 2;
+        top: (@__selectTriggerHeightMiddle - 22) / 2;
       }
     }
     &--multiple {
-      min-height: @__select-trigger-height-middle;
+      min-height: @__selectTriggerHeightMiddle;
       .@{__selectPrefixCls}-selection__rendered {
         >ul>li {
-          margin-top: (@__select-trigger-height-middle - 2 - @__select-trigger-label-height-middle) / 2;
-          height: @__select-trigger-label-height-middle;
-          line-height: @__select-trigger-label-height-middle;
+          margin-top: (@__selectTriggerHeightMiddle - 2 - @__selectTriggerLabelHeightMiddle) / 2;
+          height: @__selectTriggerLabelHeightMiddle;
+          line-height: @__selectTriggerLabelHeightMiddle;
         }
       }
     }
     &__placeholder {
-      line-height: @__select-trigger-height-middle - 2;
+      line-height: @__selectTriggerHeightMiddle - 2;
     }
   }
   .@{__selectPrefixCls}-arrow {
-    height: @__select-trigger-height-middle - 4;
+    height: @__selectTriggerHeightMiddle - 4;
   }
 }
 
 .@{__selectPrefixCls}-small {
   .@{__selectPrefixCls}-selection {
     &--single {
-      height: @__select-trigger-height-small;
+      height: @__selectTriggerHeightSmall;
       .@{__selectPrefixCls}-selection__rendered {
-        line-height: @__select-trigger-height-small - 2;
+        line-height: @__selectTriggerHeightSmall - 2;
       }
       .@{__selectPrefixCls}-selection__clear {
-        top: (@__select-trigger-height-small - 22) / 2;
+        top: (@__selectTriggerHeightSmall - 22) / 2;
       }
     }
     &--multiple {
-      min-height: @__select-trigger-height-small;
+      min-height: @__selectTriggerHeightSmall;
       .@{__selectPrefixCls}-selection__rendered {
         >ul>li {
-          margin-top: (@__select-trigger-height-small - 2 - @__select-trigger-label-height-small) / 2;
-          height: @__select-trigger-label-height-small;
-          line-height: @__select-trigger-label-height-small;
+          margin-top: (@__selectTriggerHeightSmall - 2 - @__selectTriggerLabelHeightSmall) / 2;
+          height: @__selectTriggerLabelHeightSmall;
+          line-height: @__selectTriggerLabelHeightSmall;
         }
       }
     }
     &__placeholder {
-      line-height: @__select-trigger-height-small - 2;
+      line-height: @__selectTriggerHeightSmall - 2;
     }
   }
   .@{__selectPrefixCls}-arrow {
-    height: @__select-trigger-height-small - 4;
+    height: @__selectTriggerHeightSmall - 4;
   }
 }
 
 .@{__selectPrefixCls}-dropdown-middle {
   .@{__selectPrefixCls}-dropdown-menu li.@{__selectPrefixCls}-dropdown-menu-item {
-    padding: (@__select-trigger-height-middle - 18)/2 10px;
+    padding: (@__selectTriggerHeightMiddle - 18)/2 10px;
   }
 }
 
 .@{__selectPrefixCls}-dropdown-small {
   .@{__selectPrefixCls}-dropdown-menu li.@{__selectPrefixCls}-dropdown-menu-item {
-    padding: (@__select-trigger-height-small - 18)/2 10px;
+    padding: (@__selectTriggerHeightSmall - 18)/2 10px;
   }
 }
