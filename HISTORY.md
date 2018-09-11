@@ -2,6 +2,15 @@
 
 ---
 
+## 8.1.0
+
+* `CHANEGD` fix rc-select version to `~8.1.0`
+
+## 0.5.0
+
+* `CHANGED` adapt React 16
+* `CHANGED` update `rc-select` to `^8.0.0`
+
 ## 0.4.25
 
 * `CHANGED` update `rc-select` to `^7.0.0`
