@@ -2,6 +2,10 @@
 
 ---
 
+## 8.1.1
+
+* `CHANGED` support js style export
+
 ## 8.1.0
 
 * `CHANEGD` fix rc-select version to `~8.1.0`

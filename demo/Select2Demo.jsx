@@ -5,16 +5,20 @@ const { Option } = Select;
 
 const children = [];
 for (let i = 10; i < 36; i++) {
-  children.push(<Option key={i.toString(36) + i}>
-    {i.toString(36) + i}
-  </Option>);
+  children.push(
+    <Option key={i.toString(36) + i}>
+      {i.toString(36) + i}
+    </Option>,
+  );
 }
 
 const tagChildren = [];
 for (let i = 10; i < 36; i++) {
-  tagChildren.push(<Option key={i.toString(36) + i}>
-    {i.toString(36) + i}
-  </Option>);
+  tagChildren.push(
+    <Option key={i.toString(36) + i}>
+      {i.toString(36) + i}
+    </Option>,
+  );
 }
 
 const provinceData = ['浙江', '江苏'];
@@ -22,6 +26,8 @@ const cityData = {
   浙江: ['杭州', '宁波', '温州'],
   江苏: ['南京', '苏州', '镇江'],
 };
+
+/* eslint-disable react/no-unused-state */
 
 class Demo extends React.Component {
   constructor(props) {
@@ -53,7 +59,7 @@ class Demo extends React.Component {
 
   fetchData(value) {
     const me = this;
-    $.ajax({
+    window.$.ajax({
       url: 'http://suggest.taobao.com/sug',
       dataType: 'jsonp',
       data: { q: value },
@@ -107,12 +113,15 @@ class Demo extends React.Component {
 
   render() {
     const me = this;
+    const {
+      size, cities, options, secondCity,
+    } = this.state;
     const provinceOptions = provinceData.map(province => (
       <Option key={province}>
         {province}
       </Option>
     ));
-    const cityOptions = this.state.cities.map(city => (
+    const cityOptions = cities.map(city => (
       <Option key={city}>
         {city}
       </Option>
@@ -129,11 +138,11 @@ class Demo extends React.Component {
             尺寸:
           </p>
           <Select
-            size={this.state.size}
+            size={size}
             allowClear
-            value={this.state.size}
+            value={size}
             style={{ width: '200px' }}
-            onChange={(size) => { this.setState({ size }); }}
+            onChange={(newSize) => { this.setState({ size: newSize }); }}
           >
             <Option value="large">
               large
@@ -149,7 +158,7 @@ class Demo extends React.Component {
             基本使用:
           </p>
           <Select
-            size={this.state.size}
+            size={size}
             placeholder="请选择"
             notFoundContent=""
             onSearch={(key) => { console.log(key); }}
@@ -176,7 +185,7 @@ class Demo extends React.Component {
             带搜索框:
           </p>
           <Select
-            size={this.state.size}
+            size={size}
             defaultValue="lucy"
             showSearch
             style={{ width: '200px' }}
@@ -200,7 +209,7 @@ class Demo extends React.Component {
             多选:
           </p>
           <Select
-            size={this.state.size}
+            size={size}
             multiple
             style={{ width: '400px' }}
             defaultValue={['a10', 'c12']}
@@ -214,7 +223,7 @@ class Demo extends React.Component {
             多选提示，提示项根据 ajax 获得
           </p>
           <Select
-            size={this.state.size}
+            size={size}
             multiple
             filterOption={false}
             style={{ width: '400px' }}
@@ -227,7 +236,7 @@ class Demo extends React.Component {
             标签:(标签的意义是，用户可以通过键盘自己输入值，而不局限于传入的选项)
           </p>
           <Select
-            size={this.state.size}
+            size={size}
             style={{ width: '100%' }}
             searchPlaceholder="标签模式"
             tags
@@ -239,20 +248,20 @@ class Demo extends React.Component {
             智能提示
           </p>
           <Select
-            size={this.state.size}
+            size={size}
             combobox
             style={{ width: '200px' }}
             onChange={this.handleMailChange.bind(this)}
             filterOption={false}
             searchPlaceholder="请输入账户名"
           >
-            {this.state.options}
+            {options}
           </Select>
           <p>
             联动
           </p>
           <Select
-            size={this.state.size}
+            size={size}
             defaultValue={provinceData[0]}
             style={{ width: '150px' }}
             onChange={this.handleProvinceChange.bind(this)}
@@ -261,8 +270,8 @@ class Demo extends React.Component {
           </Select>
           &nbsp;
           <Select
-            size={this.state.size}
-            value={this.state.secondCity}
+            size={size}
+            value={secondCity}
             style={{ width: '150px' }}
             onChange={this.onSecondCityChange.bind(this)}
           >
@@ -272,7 +281,7 @@ class Demo extends React.Component {
             Combo 模式
           </p>
           <Select
-            size={this.state.size}
+            size={size}
             combobox
           >
             {cityOptions}
@@ -281,7 +290,7 @@ class Demo extends React.Component {
             禁用
           </p>
           <Select
-            size={this.state.size}
+            size={size}
             defaultValue="lucy"
             style={{ width: '200px' }}
             disabled
@@ -303,7 +312,7 @@ class Demo extends React.Component {
             inline
           </p>
           <Select
-            size={this.state.size}
+            size={size}
             className="kuma-select2-inline"
             placeholder="请选择"
             showSearch={false}
