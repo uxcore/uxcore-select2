@@ -1,4 +1,4 @@
-@__select-prefix-cls: kuma-select2;
+@__selectPrefixCls: kuma-select2;
 @__select-trigger-height-large: @trigger-height-large;
 @__select-trigger-label-height-large: 24px;
 @__select-trigger-height-middle: @trigger-height-middle;
@@ -11,7 +11,7 @@
   transform-origin: 0 0;
 }
 
-.@{__select-prefix-cls} {
+.@{__selectPrefixCls} {
   box-sizing: border-box;
   display: inline-block;
   position: relative;
@@ -49,7 +49,7 @@
     }
   }
   &-combobox {
-    .@{__select-prefix-cls}-arrow {
+    .@{__selectPrefixCls}-arrow {
       display: none;
     }
   }
@@ -65,7 +65,7 @@
     border-radius: @global-border-radius;
     &:hover {
       border-color: @border-hover-color;
-      .@{__select-prefix-cls}-arrow b {
+      .@{__selectPrefixCls}-arrow b {
         border-color: @normal-alpha-3 transparent transparent transparent;
       }
     }
@@ -105,7 +105,7 @@
     padding-right: 10px;
   }
   &-allow-clear {
-    .@{__select-prefix-cls}-selection-selected-value {
+    .@{__selectPrefixCls}-selection-selected-value {
       padding-right: 30px;
     }
   }
@@ -113,12 +113,12 @@
     height: @__select-trigger-height-large;
     cursor: pointer;
     position: relative;
-    .@{__select-prefix-cls}-selection__placeholder {
+    .@{__selectPrefixCls}-selection__placeholder {
       position: absolute;
       top: 0;
       color: @normal-alpha-4;
     }
-    .@{__select-prefix-cls}-selection__rendered {
+    .@{__selectPrefixCls}-selection__rendered {
       display: block;
       overflow: hidden;
       white-space: nowrap;
@@ -129,7 +129,7 @@
       margin-right: 20px;
       line-height: 34px;
     }
-    .@{__select-prefix-cls}-selection__clear {
+    .@{__selectPrefixCls}-selection__clear {
       font-weight: normal;
       position: absolute;
       font-family: "uxcore";
@@ -158,10 +158,10 @@
   &-search--inline {
     width: 100%;
     position: relative;
-    .@{__select-prefix-cls}-search__field__wrap {
+    .@{__selectPrefixCls}-search__field__wrap {
       width: 100%;
     }
-    .@{__select-prefix-cls}-search__field {
+    .@{__selectPrefixCls}-search__field {
       border: none;
       font-size: 100%;
       line-height: 16px;
@@ -172,13 +172,13 @@
         display: none;
       }
     }
-    .@{__select-prefix-cls}-search__field__mirror {
+    .@{__selectPrefixCls}-search__field__mirror {
       position: absolute;
       top: -999px;
       left: 0;
       white-space: pre;
     }
-    .@{__select-prefix-cls}-selection-selected-value {
+    .@{__selectPrefixCls}-selection-selected-value {
       position: absolute;
       left: 0;
       top: 0;
@@ -190,26 +190,26 @@
       float: right;
     }
   }
-  &-enabled.@{__select-prefix-cls}-selection--multiple {
+  &-enabled.@{__selectPrefixCls}-selection--multiple {
     cursor: text;
   }
   &-selection--multiple {
     min-height: @__select-trigger-height-large;
-    .@{__select-prefix-cls}-search--inline {
+    .@{__selectPrefixCls}-search--inline {
       float: left;
       width: auto;
-      .@{__select-prefix-cls}-search__field {
+      .@{__selectPrefixCls}-search__field {
         &__wrap {
           width: auto;
         }
         width: 0.75em;
       }
     }
-    .@{__select-prefix-cls}-search__field__placeholder {
+    .@{__selectPrefixCls}-search__field__placeholder {
       top: 9px;
       left: 8px;
     }
-    .@{__select-prefix-cls}-selection__rendered {
+    .@{__selectPrefixCls}-selection__rendered {
       //display: inline-block;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -223,19 +223,19 @@
     }
   }
   &-enabled {
-    .@{__select-prefix-cls}-selection__choice {
+    .@{__selectPrefixCls}-selection__choice {
       cursor: default;
-      .@{__select-prefix-cls}-selection__choice__remove {
+      .@{__selectPrefixCls}-selection__choice__remove {
         opacity: 1;
         transform: scale(0.8);
       }
-      .@{__select-prefix-cls}-selection__choice__content {
+      .@{__selectPrefixCls}-selection__choice__content {
         margin-left: -8px;
         margin-right: 8px;
       }
     }
   }
-  & .@{__select-prefix-cls}-selection__choice {
+  & .@{__selectPrefixCls}-selection__choice {
     background-color: @normal-alpha-7;
     border-radius: 4px;
     float: left;
@@ -261,12 +261,12 @@
       opacity: 1;
       animation-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
     }
-    &-zoom-enter.@{__select-prefix-cls}-selection__choice-zoom-enter-active,
-    &-zoom-appear.@{__select-prefix-cls}-selection__choice-zoom-appear-active {
+    &-zoom-enter.@{__selectPrefixCls}-selection__choice-zoom-enter-active,
+    &-zoom-appear.@{__selectPrefixCls}-selection__choice-zoom-appear-active {
       animation-play-state: running;
       animation-name: rcSelectChoiceZoomIn;
     }
-    &-zoom-leave.@{__select-prefix-cls}-selection__choice-zoom-leave-active {
+    &-zoom-leave.@{__selectPrefixCls}-selection__choice-zoom-leave-active {
       animation-play-state: running;
       animation-name: rcSelectChoiceZoomOut;
     }
@@ -311,7 +311,7 @@
   &-disabled {
     color: @text-disabled-color;
     cursor: not-allowed;
-    .@{__select-prefix-cls}-selection {
+    .@{__selectPrefixCls}-selection {
       border-color: @border-disabled-color;
       background-color: @bg-disabled-color;
       &:hover,
@@ -319,14 +319,14 @@
         border-color: @border-disabled-color;
       }
     }
-    .@{__select-prefix-cls}-selection__choice {
+    .@{__selectPrefixCls}-selection__choice {
       background-color: @normal-alpha-8;
     }
-    .@{__select-prefix-cls}-arrow b {
+    .@{__selectPrefixCls}-arrow b {
       border-color: @normal-alpha-6 transparent transparent transparent;
     }
-    .@{__select-prefix-cls}-selection--single,
-    .@{__select-prefix-cls}-selection__choice__remove {
+    .@{__selectPrefixCls}-selection--single,
+    .@{__selectPrefixCls}-selection__choice__remove {
       cursor: not-allowed;
       color: @text-disabled-color;
       &:hover,
@@ -364,7 +364,7 @@
       &-item-group-list {
         margin: 0;
         padding: 0;
-        >li.@{__select-prefix-cls}-menu-item {
+        >li.@{__selectPrefixCls}-menu-item {
           padding-left: 20px;
         }
       }
@@ -374,7 +374,7 @@
         padding: 8px 10px;
         border-bottom: 1px solid #dedede;
       }
-      li.@{__select-prefix-cls}-dropdown-menu-item {
+      li.@{__selectPrefixCls}-dropdown-menu-item {
         transition: all 0.15s @transition-ease;
         margin: 0;
         position: relative;
@@ -402,7 +402,7 @@
           line-height: 0;
         }
       }
-      li.@{__select-prefix-cls}-dropdown-menu-item-selected {
+      li.@{__selectPrefixCls}-dropdown-menu-item-selected {
         color: @dark-alpha-1;
         background: @normal-alpha-9;
         font-weight: bold;
@@ -412,13 +412,13 @@
   &-dropdown-search {
     display: block;
     padding: 4px;
-    .@{__select-prefix-cls}-search__field__wrap {
+    .@{__selectPrefixCls}-search__field__wrap {
       width: 100%;
     }
-    .@{__select-prefix-cls}-search__field__placeholder {
+    .@{__selectPrefixCls}-search__field__placeholder {
       top: 4px;
     }
-    .@{__select-prefix-cls}-search__field {
+    .@{__selectPrefixCls}-search__field {
       padding: 4px;
       width: 100%;
       box-sizing: border-box;
@@ -426,12 +426,12 @@
       border-radius: @input-border-radius;
       outline: none;
     }
-    &.@{__select-prefix-cls}-search--hide {
+    &.@{__selectPrefixCls}-search--hide {
       display: none;
     }
   }
   &-open {
-    .@{__select-prefix-cls}-arrow b {
+    .@{__selectPrefixCls}-arrow b {
       border-color: @normal-alpha-3 transparent transparent transparent;
       transform: rotate(180deg);
       -ms-transform: rotate(180deg);
@@ -439,8 +439,8 @@
   }
 }
 
-.@{__select-prefix-cls}-selected-has-icon {
-  li.@{__select-prefix-cls}-dropdown-menu-item-selected {
+.@{__selectPrefixCls}-selected-has-icon {
+  li.@{__selectPrefixCls}-dropdown-menu-item-selected {
     padding-right: 20px;
     &:before {
       content: "\e6bf";
@@ -460,8 +460,8 @@
   }
 }
 
-.@{__select-prefix-cls}-inline {
-  .@{__select-prefix-cls}-selection {
+.@{__selectPrefixCls}-inline {
+  .@{__selectPrefixCls}-selection {
     background: transparent;
     border-color: transparent;
     &:hover {
@@ -525,7 +525,7 @@
   }
 }
 
-.@{__select-prefix-cls}-dropdown-placement-bottomLeft {
+.@{__selectPrefixCls}-dropdown-placement-bottomLeft {
   &.selectSlideUp-enter,
   &.selectSlideUp-appear {
     opacity: 0;
@@ -550,7 +550,7 @@
   }
 }
 
-.@{__select-prefix-cls}-dropdown-placement-topLeft {
+.@{__selectPrefixCls}-dropdown-placement-topLeft {
   &.selectSlideUp-enter,
   &.selectSlideUp-appear {
     opacity: 0;
@@ -575,20 +575,20 @@
   }
 }
 
-.@{__select-prefix-cls}-middle {
-  .@{__select-prefix-cls}-selection {
+.@{__selectPrefixCls}-middle {
+  .@{__selectPrefixCls}-selection {
     &--single {
       height: @__select-trigger-height-middle;
-      .@{__select-prefix-cls}-selection__rendered {
+      .@{__selectPrefixCls}-selection__rendered {
         line-height: @__select-trigger-height-middle - 2;
       }
-      .@{__select-prefix-cls}-selection__clear {
+      .@{__selectPrefixCls}-selection__clear {
         top: (@__select-trigger-height-middle - 22) / 2;
       }
     }
     &--multiple {
       min-height: @__select-trigger-height-middle;
-      .@{__select-prefix-cls}-selection__rendered {
+      .@{__selectPrefixCls}-selection__rendered {
         >ul>li {
           margin-top: (@__select-trigger-height-middle - 2 - @__select-trigger-label-height-middle) / 2;
           height: @__select-trigger-label-height-middle;
@@ -600,25 +600,25 @@
       line-height: @__select-trigger-height-middle - 2;
     }
   }
-  .@{__select-prefix-cls}-arrow {
+  .@{__selectPrefixCls}-arrow {
     height: @__select-trigger-height-middle - 4;
   }
 }
 
-.@{__select-prefix-cls}-small {
-  .@{__select-prefix-cls}-selection {
+.@{__selectPrefixCls}-small {
+  .@{__selectPrefixCls}-selection {
     &--single {
       height: @__select-trigger-height-small;
-      .@{__select-prefix-cls}-selection__rendered {
+      .@{__selectPrefixCls}-selection__rendered {
         line-height: @__select-trigger-height-small - 2;
       }
-      .@{__select-prefix-cls}-selection__clear {
+      .@{__selectPrefixCls}-selection__clear {
         top: (@__select-trigger-height-small - 22) / 2;
       }
     }
     &--multiple {
       min-height: @__select-trigger-height-small;
-      .@{__select-prefix-cls}-selection__rendered {
+      .@{__selectPrefixCls}-selection__rendered {
         >ul>li {
           margin-top: (@__select-trigger-height-small - 2 - @__select-trigger-label-height-small) / 2;
           height: @__select-trigger-label-height-small;
@@ -630,19 +630,19 @@
       line-height: @__select-trigger-height-small - 2;
     }
   }
-  .@{__select-prefix-cls}-arrow {
+  .@{__selectPrefixCls}-arrow {
     height: @__select-trigger-height-small - 4;
   }
 }
 
-.@{__select-prefix-cls}-dropdown-middle {
-  .@{__select-prefix-cls}-dropdown-menu li.@{__select-prefix-cls}-dropdown-menu-item {
+.@{__selectPrefixCls}-dropdown-middle {
+  .@{__selectPrefixCls}-dropdown-menu li.@{__selectPrefixCls}-dropdown-menu-item {
     padding: (@__select-trigger-height-middle - 18)/2 10px;
   }
 }
 
-.@{__select-prefix-cls}-dropdown-small {
-  .@{__select-prefix-cls}-dropdown-menu li.@{__select-prefix-cls}-dropdown-menu-item {
+.@{__selectPrefixCls}-dropdown-small {
+  .@{__selectPrefixCls}-dropdown-menu li.@{__selectPrefixCls}-dropdown-menu-item {
     padding: (@__select-trigger-height-small - 18)/2 10px;
   }
 }
