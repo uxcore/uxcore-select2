@@ -2,6 +2,10 @@
 
 ---
 
+## 0.4.26
+
+* `CHANGED` fix `rc-select` version to `7.7.5`, cause 7.7.6+ has a bug when blur
+
 ## 0.4.25
 
 * `CHANGED` update `rc-select` to `^7.0.0`
