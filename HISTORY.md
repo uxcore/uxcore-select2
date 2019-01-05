@@ -2,6 +2,14 @@
 
 ---
 
+## 0.5.6
+
+`NEW` add prop rcRef to get the ref of RcSelect, sometimes we need to call it's public methods
+
+## 0.5.5
+
+* `CHANGED` update placeholder color from normal-alpha-4 to normal-4
+
 ## 0.5.4
 
 * `CHANGED` support js style export
