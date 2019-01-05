@@ -167,6 +167,7 @@ class Demo extends React.Component {
             allowClear
             getPopupContainer={() => document.getElementById('container')}
             dropdownClassName="kuma-select2-selected-has-icon"
+            rcRef={(r) => { console.log(r); }}
           >
             <Option value="jack">
               Jack
