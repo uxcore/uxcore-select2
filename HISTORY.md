@@ -2,6 +2,9 @@
 
 ---
 
+## 0.5.7
+`CHANGED` change placeholder color to same as design
+
 ## 0.5.6
 
 `NEW` add prop rcRef to get the ref of RcSelect, sometimes we need to call it's public methods
@@ -112,7 +115,7 @@
 `CHANGED` add IE10/11 css hack to fix input width bug.
 
 ## 0.2.6
-`NEW` add inline style 
+`NEW` add inline style
 
 ## 0.2.5
 
@@ -121,7 +124,7 @@
 
 ## 0.2.4
 
-`FIX` fix style bug when option text is too long. 
+`FIX` fix style bug when option text is too long.
 
 ## 0.2.3
 
