@@ -10,7 +10,7 @@ class Select2 extends React.Component {
     const { labelInValue, value, prefixCls} = this.props
     if (labelInValue && value && value.label && value.title) {
       const $select = ReactDom.findDOMNode(this.rcSelect)
-      const $value = $select.querySelector(`${prefixCls}-selection-selected-value`)
+      const $value = $select.querySelector(`.${prefixCls}-selection-selected-value`)
       if ($value) {
         $value.title = value.title
       }
