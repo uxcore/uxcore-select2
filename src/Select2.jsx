@@ -1,10 +1,21 @@
 import RcSelect from 'rc-select';
 import classnames from 'classnames';
 import React from 'react';
+import ReactDom from 'react-dom'
 import PropTypes from 'prop-types';
 
 
 class Select2 extends React.Component {
+  componentDidMount() {
+    const { labelInValue, value, prefixCls} = this.props
+    if (labelInValue && value && value.label && value.title) {
+      const $select = ReactDom.findDOMNode(this.rcSelect)
+      const $value = $select.querySelector(`${prefixCls}-selection-selected-value`)
+      if ($value) {
+        $value.title = value.title
+      }
+    }
+  }
   render() {
     const me = this;
     const className = classnames(me.props.className, {
@@ -17,7 +28,7 @@ class Select2 extends React.Component {
     return (
       <RcSelect
         {...this.props}
-        ref={this.props.rcRef}
+        ref={(c) => {this.rcSelect = c; this.props.rcRef(c)}}
         className={className}
         dropdownClassName={dropdownClassName}
         onSearch={(key) => { this.forceUpdate(); this.props.onSearch(key); }}
