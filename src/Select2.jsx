@@ -4,9 +4,8 @@ import React from 'react';
 import ReactDom from 'react-dom'
 import PropTypes from 'prop-types';
 
-
 class Select2 extends React.Component {
-  componentDidMount() {
+  updateTitle() {
     const { labelInValue, value, prefixCls} = this.props
     if (labelInValue && value && value.label && value.title) {
       const $select = ReactDom.findDOMNode(this.rcSelect)
@@ -15,6 +14,12 @@ class Select2 extends React.Component {
         $value.title = value.title
       }
     }
+  }
+  componentDidMount() {
+    this.updateTitle()
+  }
+  componentDidUpdate() {
+    this.updateTitle()
   }
   render() {
     const me = this;
